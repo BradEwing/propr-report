@@ -1,0 +1,34 @@
+[
+  {
+    "dev_id": "planning-1217-euclid",
+    "address": "1217",
+    "street": "Euclid",
+    "reason": "no parcel on \"EUCLID\" matched address number(s) 1217",
+    "lon": -118.489201936811,
+    "lat": 34.025588189936
+  },
+  {
+    "dev_id": "planning-528-arizona-ave",
+    "address": "528",
+    "street": "Arizona Ave",
+    "reason": "no parcel on \"ARIZONA AVE\" matched address number(s) 528",
+    "lon": -118.494803755775,
+    "lat": 34.018858528705
+  },
+  {
+    "dev_id": "planning-700-santa-monica-blvd",
+    "address": "700",
+    "street": "Santa Monica Blvd",
+    "reason": "no parcel on \"SANTA MONICA BLVD\" matched address number(s) 700",
+    "lon": -118.49184695561,
+    "lat": 34.01876460948
+  },
+  {
+    "dev_id": "under-construction-2512-7th-st",
+    "address": "2512",
+    "street": "7th St",
+    "reason": "no parcel on \"7TH ST\" matched address number(s) 2512",
+    "lon": -118.479145664745,
+    "lat": 34.006987583437
+  }
+]

@@ -51,6 +51,62 @@ Attachment D from both reports, tagged by `source_fiscal_year`. Income columns:
 `moderate`, `li`, `vli`, `above_moderate`. `project_id` exists only in FY2023-24;
 it is blank for FY2024-25 rows, where the source omitted that column.
 
+### `developments.csv`
+
+Generated, not hand-edited. `tools/build_developments.py` unions the three
+address tables above into one row per development for the interactive map. Run
+that script after editing any of the source address CSVs; do not edit
+`developments.csv` directly. Unified schema:
+
+`dev_id`, `category`, `project_id`, `address`, `street`, `description`,
+`zoning`, `date_iso`, `date_raw`, `eli`, `vli`, `li`, `moderate`,
+`above_moderate`, `affordable_units`, `market_units`, `total_units`,
+`source_fiscal_year`, `note`.
+
+- `dev_id` is the stable join key the geo step keys parcels off. It is
+  `${category}-${address}-${street}` lowercased, with every run of
+  non-alphanumeric characters collapsed to a single hyphen and the ends
+  trimmed. Collisions get a numeric suffix (`-2`, `-3`, ...). Unique across all
+  rows.
+- `category` is `completed`, `under_construction`, or `planning`.
+- Income bands are integer unit counts; a blank source cell reads as `0`.
+  Under-construction AMI bands map to named bands: `ami_30 -> eli`,
+  `ami_50 -> vli`, `ami_80 -> li`, `ami_120 -> moderate`. Planning has no ELI
+  column, so `eli` is `0` there.
+- `affordable_units = eli + vli + li + moderate`; `market_units = above_moderate`.
+- `total_units` derivation by source: completed FY2024-25 uses the source
+  `total_units` column; completed FY2023-24 (which omitted it) derives it as the
+  sum of the income bands; under_construction uses the source `num_units`;
+  planning sums its bands (`moderate + li + vli + above_moderate`).
+- `date_iso` normalizes the verbatim US `M/D/YYYY` date (`final_date` for
+  completed/planning, `building_permit_date` for under_construction) to ISO
+  `YYYY-MM-DD`; `date_raw` keeps the original string. Both blank if the source
+  is blank.
+- `note` carries the under-construction `note` (e.g. `in-lieu fee`, offsite
+  references); blank for the other categories.
+
+Dedup / snapshot decisions:
+
+- **completed**: the two fiscal-year sets are disjoint (a building completes
+  once), so all rows from both years are kept.
+- **under_construction**: each report is a point-in-time snapshot and addresses
+  repeat across years, so only the latest snapshot (`source_fiscal_year`
+  `2024-25`, a superset of `2023-24`) is kept; the `2023-24` rows are dropped.
+- **planning**: the two years' approvals are distinct projects with disjoint
+  addresses, so all rows from both years are kept; if any `address`+`street`
+  ever collides across years, the latest `source_fiscal_year` wins.
+
+Current output: 58 rows (12 completed, 23 under_construction, 23 planning).
+
+## PDF extraction decision
+
+The hand-curated, validated CSVs stay the source of truth; we are **not**
+building an automated PDF extractor. Rationale: the source PDFs have no text
+layer (glyphs are vector outlines, OCR-only), and for a two-report dataset that
+is restated annually, visual transcription checked by the 38-assertion
+validation harness (`tools/validate_curated.py`) is more reliable than fragile
+OCR.
+
 ## Known source anomalies
 
 Two cells in the FY2024-25 Attachment B table are wrong in the source. Each was

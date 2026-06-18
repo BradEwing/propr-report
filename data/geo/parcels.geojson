@@ -1,0 +1,4325 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source": "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Santa_Monica_public_parcels/FeatureServer/0",
+    "join_key": "dev_id",
+    "parcel_id_field": "ain",
+    "out_sr": 4326,
+    "geometry_precision": 6,
+    "total_developments": 58,
+    "matched_developments": 54,
+    "unmatched_developments": 4,
+    "matched_parcel_features": 88,
+    "generated_by": "site/scripts/fetch-geometry.ts"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.495885,
+              34.019362
+            ],
+            [
+              -118.49624,
+              34.019074
+            ],
+            [
+              -118.496241,
+              34.019075
+            ],
+            [
+              -118.496355,
+              34.019173
+            ],
+            [
+              -118.496,
+              34.01946
+            ],
+            [
+              -118.495886,
+              34.019363
+            ],
+            [
+              -118.495885,
+              34.019362
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "completed-1235-5th-st",
+        "category": "completed",
+        "total_units": 23,
+        "address": "1235",
+        "street": "5th St",
+        "apn": "4291005014",
+        "ain": "4291005014",
+        "situs_address": "1235 5TH ST SANTA MONICA CA 90401",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.478864,
+              34.018976
+            ],
+            [
+              -118.478703,
+              34.018838
+            ],
+            [
+              -118.479058,
+              34.018551
+            ],
+            [
+              -118.479219,
+              34.018689
+            ],
+            [
+              -118.479334,
+              34.018787
+            ],
+            [
+              -118.478979,
+              34.019075
+            ],
+            [
+              -118.478864,
+              34.018976
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "completed-1413-michigan-ave",
+        "category": "completed",
+        "total_units": 58,
+        "address": "1413",
+        "street": "Michigan Ave",
+        "apn": "4283013024",
+        "ain": "4283013024",
+        "situs_address": "1413 MICHIGAN AVE SANTA MONICA CA 90404",
+        "usetype": "Commercial",
+        "usedescrip": "Store Combination"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.475815,
+              34.03001
+            ],
+            [
+              -118.47591,
+              34.029934
+            ],
+            [
+              -118.476028,
+              34.029838
+            ],
+            [
+              -118.476146,
+              34.029742
+            ],
+            [
+              -118.47625,
+              34.029831
+            ],
+            [
+              -118.476132,
+              34.029927
+            ],
+            [
+              -118.476013,
+              34.030022
+            ],
+            [
+              -118.475918,
+              34.030099
+            ],
+            [
+              -118.475815,
+              34.03001
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "completed-1450-cloverfield",
+        "category": "completed",
+        "total_units": 35,
+        "address": "1450",
+        "street": "Cloverfield",
+        "apn": "4275005016",
+        "ain": "4275005016",
+        "situs_address": "1450 CLOVERFIELD BLVD SANTA MONICA CA 90404",
+        "usetype": "Residential",
+        "usedescrip": "Three Units (Any Combination)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.465546,
+              34.035967
+            ],
+            [
+              -118.465919,
+              34.035666
+            ],
+            [
+              -118.466034,
+              34.035764
+            ],
+            [
+              -118.465661,
+              34.036066
+            ],
+            [
+              -118.465546,
+              34.035967
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "completed-1541-franklin-st",
+        "category": "completed",
+        "total_units": 5,
+        "address": "1541",
+        "street": "Franklin St.",
+        "apn": "4267028017",
+        "ain": "4267028017",
+        "situs_address": "1541 FRANKLIN ST SANTA MONICA CA 90404",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.489368,
+              34.017017
+            ],
+            [
+              -118.489367,
+              34.017018
+            ],
+            [
+              -118.489013,
+              34.017305
+            ],
+            [
+              -118.488898,
+              34.017206
+            ],
+            [
+              -118.488783,
+              34.017108
+            ],
+            [
+              -118.488668,
+              34.017009
+            ],
+            [
+              -118.488553,
+              34.016911
+            ],
+            [
+              -118.48847,
+              34.01684
+            ],
+            [
+              -118.488468,
+              34.016837
+            ],
+            [
+              -118.488455,
+              34.016817
+            ],
+            [
+              -118.488455,
+              34.016806
+            ],
+            [
+              -118.488461,
+              34.016793
+            ],
+            [
+              -118.488792,
+              34.016525
+            ],
+            [
+              -118.488907,
+              34.016623
+            ],
+            [
+              -118.489023,
+              34.016722
+            ],
+            [
+              -118.489138,
+              34.01682
+            ],
+            [
+              -118.489253,
+              34.016919
+            ],
+            [
+              -118.489368,
+              34.017017
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "completed-1560-lincoln-blvd",
+        "category": "completed",
+        "total_units": 100,
+        "address": "1560",
+        "street": "Lincoln Blvd",
+        "apn": "4291022027",
+        "ain": "4291022027",
+        "situs_address": "1560 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Residential",
+        "usedescrip": "Five or more apartments"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.475349,
+              34.019791
+            ],
+            [
+              -118.475704,
+              34.019504
+            ],
+            [
+              -118.475819,
+              34.019602
+            ],
+            [
+              -118.475464,
+              34.019889
+            ],
+            [
+              -118.475349,
+              34.019791
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "completed-1840-17th-street",
+        "category": "completed",
+        "total_units": 5,
+        "address": "1840",
+        "street": "17th Street",
+        "apn": "4283032042",
+        "ain": "4283032042",
+        "situs_address": "1840 17TH ST SANTA MONICA CA 90404",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.488244,
+              34.007313
+            ],
+            [
+              -118.488117,
+              34.007186
+            ],
+            [
+              -118.488243,
+              34.007098
+            ],
+            [
+              -118.48837,
+              34.007225
+            ],
+            [
+              -118.488498,
+              34.007351
+            ],
+            [
+              -118.488371,
+              34.00744
+            ],
+            [
+              -118.488244,
+              34.007313
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "completed-212-bay-st",
+        "category": "completed",
+        "total_units": 3,
+        "address": "212",
+        "street": "Bay St",
+        "apn": "4289018056",
+        "ain": "4289018056",
+        "situs_address": "212 BAY ST SANTA MONICA CA 90405",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.4759,
+              34.037478
+            ],
+            [
+              -118.476239,
+              34.037768
+            ],
+            [
+              -118.476121,
+              34.037864
+            ],
+            [
+              -118.475782,
+              34.037573
+            ],
+            [
+              -118.4759,
+              34.037478
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "completed-2729-wilshire-blvd",
+        "category": "completed",
+        "total_units": 9,
+        "address": "2729",
+        "street": "Wilshire Blvd",
+        "apn": "4266016127",
+        "ain": "4266016127",
+        "situs_address": "2729 WILSHIRE BLVD SANTA MONICA CA 90403",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.472798,
+              34.004113
+            ],
+            [
+              -118.472801,
+              34.00408
+            ],
+            [
+              -118.472914,
+              34.004015
+            ],
+            [
+              -118.473147,
+              34.004247
+            ],
+            [
+              -118.473051,
+              34.004302
+            ],
+            [
+              -118.472798,
+              34.004113
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "completed-2903-2931-lincoln-blvd",
+        "category": "completed",
+        "total_units": 47,
+        "address": "2903-2931",
+        "street": "Lincoln Blvd",
+        "apn": "4287030036",
+        "ain": "4287030036",
+        "situs_address": "2920 LINCOLN BLVD SANTA MONICA CA 90405",
+        "usetype": "Commercial",
+        "usedescrip": "Restaurants, Cocktail Lounges"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.48884,
+              34.016486
+            ],
+            [
+              -118.489017,
+              34.016343
+            ],
+            [
+              -118.489018,
+              34.016343
+            ],
+            [
+              -118.489132,
+              34.016441
+            ],
+            [
+              -118.489247,
+              34.01654
+            ],
+            [
+              -118.489246,
+              34.01654
+            ],
+            [
+              -118.48907,
+              34.016683
+            ],
+            [
+              -118.488955,
+              34.016585
+            ],
+            [
+              -118.48884,
+              34.016487
+            ],
+            [
+              -118.48884,
+              34.016486
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "completed-711-colorado-ave",
+        "category": "completed",
+        "total_units": 56,
+        "address": "711",
+        "street": "Colorado Ave",
+        "apn": "4291022012",
+        "ain": "4291022012",
+        "situs_address": "711 COLORADO AVE SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Parking Lots (Commercial Use Properties)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.491991,
+              34.03088
+            ],
+            [
+              -118.492346,
+              34.030592
+            ],
+            [
+              -118.492461,
+              34.030691
+            ],
+            [
+              -118.492106,
+              34.030979
+            ],
+            [
+              -118.491991,
+              34.03088
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "completed-930-15th-st",
+        "category": "completed",
+        "total_units": 3,
+        "address": "930",
+        "street": "15th St",
+        "apn": "4281010099",
+        "ain": "4281010099",
+        "situs_address": "930 15TH ST UNIT   D SANTA MONICA CA 90403",
+        "usetype": "Residential",
+        "usedescrip": "Four Units (Any Combination)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.495716,
+              34.027094
+            ],
+            [
+              -118.496071,
+              34.026806
+            ],
+            [
+              -118.496186,
+              34.026904
+            ],
+            [
+              -118.495831,
+              34.027192
+            ],
+            [
+              -118.495716,
+              34.027094
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "completed-949-10th-street",
+        "category": "completed",
+        "total_units": 3,
+        "address": "949",
+        "street": "10th Street",
+        "apn": "4281025082",
+        "ain": "4281025082",
+        "situs_address": "949 10TH ST SANTA MONICA CA 90403",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.475224,
+              34.041057
+            ],
+            [
+              -118.475178,
+              34.041018
+            ],
+            [
+              -118.475533,
+              34.04073
+            ],
+            [
+              -118.475717,
+              34.040887
+            ],
+            [
+              -118.47572,
+              34.04089
+            ],
+            [
+              -118.475722,
+              34.040893
+            ],
+            [
+              -118.475724,
+              34.040897
+            ],
+            [
+              -118.475726,
+              34.040901
+            ],
+            [
+              -118.475726,
+              34.040905
+            ],
+            [
+              -118.475726,
+              34.040909
+            ],
+            [
+              -118.475725,
+              34.040913
+            ],
+            [
+              -118.475724,
+              34.040917
+            ],
+            [
+              -118.475722,
+              34.04092
+            ],
+            [
+              -118.475719,
+              34.040924
+            ],
+            [
+              -118.475716,
+              34.040926
+            ],
+            [
+              -118.475385,
+              34.041195
+            ],
+            [
+              -118.475224,
+              34.041057
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1101-stanford",
+        "category": "planning",
+        "total_units": 8,
+        "address": "1101",
+        "street": "Stanford",
+        "apn": "4266008049",
+        "ain": "4266008049",
+        "situs_address": "1101 STANFORD ST SANTA MONICA CA 90403",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.487949,
+              34.026755
+            ],
+            [
+              -118.488304,
+              34.026467
+            ],
+            [
+              -118.488419,
+              34.026565
+            ],
+            [
+              -118.4883,
+              34.026661
+            ],
+            [
+              -118.488182,
+              34.026757
+            ],
+            [
+              -118.488064,
+              34.026853
+            ],
+            [
+              -118.487949,
+              34.026755
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1217-14th-street",
+        "category": "planning",
+        "total_units": 82,
+        "address": "1217",
+        "street": "14th Street",
+        "apn": "4282003900",
+        "ain": "4282003900",
+        "situs_address": "1217 14TH ST SANTA MONICA CA 90404",
+        "usetype": "Government",
+        "usedescrip": "Government Parcel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.469233,
+              34.006892
+            ],
+            [
+              -118.469302,
+              34.006853
+            ],
+            [
+              -118.469341,
+              34.00683
+            ],
+            [
+              -118.469463,
+              34.00676
+            ],
+            [
+              -118.469757,
+              34.007047
+            ],
+            [
+              -118.469635,
+              34.007119
+            ],
+            [
+              -118.469527,
+              34.007181
+            ],
+            [
+              -118.469233,
+              34.006892
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1230-ashland",
+        "category": "planning",
+        "total_units": 8,
+        "address": "1230",
+        "street": "Ashland",
+        "apn": "4285026020",
+        "ain": "4285026020",
+        "situs_address": "1230 ASHLAND AVE SANTA MONICA CA 90405",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.493759,
+              34.016639
+            ],
+            [
+              -118.493644,
+              34.016541
+            ],
+            [
+              -118.493999,
+              34.016253
+            ],
+            [
+              -118.494114,
+              34.016352
+            ],
+            [
+              -118.494229,
+              34.01645
+            ],
+            [
+              -118.493874,
+              34.016738
+            ],
+            [
+              -118.493759,
+              34.016639
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1415-1437-5th-street",
+        "category": "planning",
+        "total_units": 422,
+        "address": "1415-1437",
+        "street": "5th Street",
+        "apn": "4291018024",
+        "ain": "4291018024",
+        "situs_address": "1418 5TH ST SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Store Combination"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.493414,
+              34.016345
+            ],
+            [
+              -118.493769,
+              34.016057
+            ],
+            [
+              -118.493883,
+              34.016155
+            ],
+            [
+              -118.493999,
+              34.016253
+            ],
+            [
+              -118.493644,
+              34.016541
+            ],
+            [
+              -118.493529,
+              34.016443
+            ],
+            [
+              -118.493414,
+              34.016345
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1415-1437-5th-street",
+        "category": "planning",
+        "total_units": 422,
+        "address": "1415-1437",
+        "street": "5th Street",
+        "apn": "4291018029",
+        "ain": "4291018029",
+        "situs_address": "1430 5TH ST SANTA MONICA CA 90401",
+        "usetype": "Residential",
+        "usedescrip": "Five or more apartments"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.492755,
+              34.016687
+            ],
+            [
+              -118.49311,
+              34.016399
+            ],
+            [
+              -118.493225,
+              34.016497
+            ],
+            [
+              -118.49287,
+              34.016785
+            ],
+            [
+              -118.492755,
+              34.016687
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1415-1437-5th-street",
+        "category": "planning",
+        "total_units": 422,
+        "address": "1415-1437",
+        "street": "5th Street",
+        "apn": "4291019018",
+        "ain": "4291019018",
+        "situs_address": "1437 5TH ST SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Parking Lots (Commercial Use Properties)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.492986,
+              34.016884
+            ],
+            [
+              -118.49287,
+              34.016785
+            ],
+            [
+              -118.493225,
+              34.016497
+            ],
+            [
+              -118.49334,
+              34.016596
+            ],
+            [
+              -118.493455,
+              34.016694
+            ],
+            [
+              -118.4931,
+              34.016982
+            ],
+            [
+              -118.492986,
+              34.016884
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1415-1437-5th-street",
+        "category": "planning",
+        "total_units": 422,
+        "address": "1415-1437",
+        "street": "5th Street",
+        "apn": "4291019019",
+        "ain": "4291019019",
+        "situs_address": "1427 5TH ST SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.4931,
+              34.016982
+            ],
+            [
+              -118.493455,
+              34.016694
+            ],
+            [
+              -118.493571,
+              34.016793
+            ],
+            [
+              -118.493216,
+              34.01708
+            ],
+            [
+              -118.4931,
+              34.016982
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1415-1437-5th-street",
+        "category": "planning",
+        "total_units": 422,
+        "address": "1415-1437",
+        "street": "5th Street",
+        "apn": "4291019020",
+        "ain": "4291019020",
+        "situs_address": "1423 5TH ST SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Store Combination"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.493216,
+              34.01708
+            ],
+            [
+              -118.493571,
+              34.016793
+            ],
+            [
+              -118.493685,
+              34.016891
+            ],
+            [
+              -118.493331,
+              34.017179
+            ],
+            [
+              -118.493216,
+              34.01708
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1415-1437-5th-street",
+        "category": "planning",
+        "total_units": 422,
+        "address": "1415-1437",
+        "street": "5th Street",
+        "apn": "4291019021",
+        "ain": "4291019021",
+        "situs_address": "1415 5TH ST SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Store Combination"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.479572,
+              34.028137
+            ],
+            [
+              -118.479927,
+              34.02785
+            ],
+            [
+              -118.479927,
+              34.027849
+            ],
+            [
+              -118.480042,
+              34.027948
+            ],
+            [
+              -118.480042,
+              34.027948
+            ],
+            [
+              -118.479687,
+              34.028235
+            ],
+            [
+              -118.479687,
+              34.028235
+            ],
+            [
+              -118.479572,
+              34.028137
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1420-1422-20th-street",
+        "category": "planning",
+        "total_units": 50,
+        "address": "1420-1422",
+        "street": "20th Street",
+        "apn": "4275009004",
+        "ain": "4275009004",
+        "situs_address": "1420 20TH ST SANTA MONICA CA 90404",
+        "usetype": "Residential",
+        "usedescrip": "Five or more apartments"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.479812,
+              34.027751
+            ],
+            [
+              -118.479812,
+              34.027751
+            ],
+            [
+              -118.479927,
+              34.027849
+            ],
+            [
+              -118.479927,
+              34.02785
+            ],
+            [
+              -118.479572,
+              34.028137
+            ],
+            [
+              -118.479572,
+              34.028137
+            ],
+            [
+              -118.479457,
+              34.028038
+            ],
+            [
+              -118.479812,
+              34.027751
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1420-1422-20th-street",
+        "category": "planning",
+        "total_units": 50,
+        "address": "1420-1422",
+        "street": "20th Street",
+        "apn": "4275009005",
+        "ain": "4275009005",
+        "situs_address": "1422 20TH ST SANTA MONICA CA 90404",
+        "usetype": "Residential",
+        "usedescrip": "Five or more apartments"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.488124,
+              34.017451
+            ],
+            [
+              -118.488479,
+              34.017163
+            ],
+            [
+              -118.488594,
+              34.017262
+            ],
+            [
+              -118.488239,
+              34.01755
+            ],
+            [
+              -118.488124,
+              34.017451
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1527-1547-lincoln-blvd",
+        "category": "planning",
+        "total_units": 210,
+        "address": "1527-1547",
+        "street": "Lincoln Blvd",
+        "apn": "4282028009",
+        "ain": "4282028009",
+        "situs_address": "1547 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Auto, Recreation EQPT, Construction EQPT, Sales & Service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.488239,
+              34.01755
+            ],
+            [
+              -118.488594,
+              34.017262
+            ],
+            [
+              -118.488709,
+              34.01736
+            ],
+            [
+              -118.488354,
+              34.017648
+            ],
+            [
+              -118.488239,
+              34.01755
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1527-1547-lincoln-blvd",
+        "category": "planning",
+        "total_units": 210,
+        "address": "1527-1547",
+        "street": "Lincoln Blvd",
+        "apn": "4282028010",
+        "ain": "4282028010",
+        "situs_address": "1543 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.488354,
+              34.017648
+            ],
+            [
+              -118.488709,
+              34.01736
+            ],
+            [
+              -118.488824,
+              34.017459
+            ],
+            [
+              -118.488469,
+              34.017746
+            ],
+            [
+              -118.488354,
+              34.017648
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1527-1547-lincoln-blvd",
+        "category": "planning",
+        "total_units": 210,
+        "address": "1527-1547",
+        "street": "Lincoln Blvd",
+        "apn": "4282028011",
+        "ain": "4282028011",
+        "situs_address": "1537 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Industrial",
+        "usedescrip": "Lgt Manf.Sm. EQPT. Manuf Sm.Shps Instr.Manuf. Prnt Plnts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.488469,
+              34.017746
+            ],
+            [
+              -118.488824,
+              34.017459
+            ],
+            [
+              -118.488939,
+              34.017557
+            ],
+            [
+              -118.488584,
+              34.017845
+            ],
+            [
+              -118.488469,
+              34.017746
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1527-1547-lincoln-blvd",
+        "category": "planning",
+        "total_units": 210,
+        "address": "1527-1547",
+        "street": "Lincoln Blvd",
+        "apn": "4282028018",
+        "ain": "4282028018",
+        "situs_address": "1533 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Industrial",
+        "usedescrip": "Lgt Manf.Sm. EQPT. Manuf Sm.Shps Instr.Manuf. Prnt Plnts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.488584,
+              34.017845
+            ],
+            [
+              -118.488939,
+              34.017557
+            ],
+            [
+              -118.489054,
+              34.017655
+            ],
+            [
+              -118.488699,
+              34.017943
+            ],
+            [
+              -118.488584,
+              34.017845
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1527-1547-lincoln-blvd",
+        "category": "planning",
+        "total_units": 210,
+        "address": "1527-1547",
+        "street": "Lincoln Blvd",
+        "apn": "4282028019",
+        "ain": "4282028019",
+        "situs_address": "1527 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Industrial",
+        "usedescrip": "Lgt Manf.Sm. EQPT. Manuf Sm.Shps Instr.Manuf. Prnt Plnts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.489367,
+              34.017018
+            ],
+            [
+              -118.489368,
+              34.017017
+            ],
+            [
+              -118.489483,
+              34.017116
+            ],
+            [
+              -118.489482,
+              34.017116
+            ],
+            [
+              -118.489128,
+              34.017403
+            ],
+            [
+              -118.489013,
+              34.017305
+            ],
+            [
+              -118.489013,
+              34.017305
+            ],
+            [
+              -118.489367,
+              34.017018
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1527-1547-lincoln-blvd",
+        "category": "planning",
+        "total_units": 210,
+        "address": "1527-1547",
+        "street": "Lincoln Blvd",
+        "apn": "4291022006",
+        "ain": "4291022006",
+        "situs_address": "1534 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Parking Lots (Commercial Use Properties)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.491676,
+              34.014188
+            ],
+            [
+              -118.49203,
+              34.013901
+            ],
+            [
+              -118.492145,
+              34.014
+            ],
+            [
+              -118.49179,
+              34.014287
+            ],
+            [
+              -118.491676,
+              34.014188
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1553-1555-4th-st",
+        "category": "planning",
+        "total_units": 60,
+        "address": "1553-1555",
+        "street": "4th St",
+        "apn": "4291025012",
+        "ain": "4291025012",
+        "situs_address": "1555 4TH ST SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Banks Savings & Loan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.493785,
+              34.009373
+            ],
+            [
+              -118.493907,
+              34.009274
+            ],
+            [
+              -118.494103,
+              34.009461
+            ],
+            [
+              -118.493992,
+              34.009551
+            ],
+            [
+              -118.493785,
+              34.009373
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1665-appian-way",
+        "category": "planning",
+        "total_units": 2,
+        "address": "1665",
+        "street": "Appian Way",
+        "apn": "4290018018",
+        "ain": "4290018018",
+        "situs_address": "1665 APPIAN WAY SANTA MONICA CA 90401",
+        "usetype": "Residential",
+        "usedescrip": "Four Units (Any Combination)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.481679,
+              34.027695
+            ],
+            [
+              -118.481564,
+              34.027596
+            ],
+            [
+              -118.481907,
+              34.027318
+            ],
+            [
+              -118.481931,
+              34.027319
+            ],
+            [
+              -118.482034,
+              34.027407
+            ],
+            [
+              -118.482149,
+              34.027506
+            ],
+            [
+              -118.481794,
+              34.027793
+            ],
+            [
+              -118.481679,
+              34.027695
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1801-santa-monica-blvd",
+        "category": "planning",
+        "total_units": 145,
+        "address": "1801",
+        "street": "Santa Monica Blvd",
+        "apn": "4276029048",
+        "ain": "4276029048",
+        "situs_address": "1801 SANTA MONICA BLVD SANTA MONICA CA 90404",
+        "usetype": "Commercial",
+        "usedescrip": "Auto, Recreation EQPT, Construction EQPT, Sales & Service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.48151,
+              34.028023
+            ],
+            [
+              -118.481395,
+              34.027925
+            ],
+            [
+              -118.48128,
+              34.027826
+            ],
+            [
+              -118.481517,
+              34.027635
+            ],
+            [
+              -118.481631,
+              34.027733
+            ],
+            [
+              -118.481747,
+              34.027832
+            ],
+            [
+              -118.481862,
+              34.02793
+            ],
+            [
+              -118.481626,
+              34.028122
+            ],
+            [
+              -118.48151,
+              34.028023
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1819-santa-monica-blvd",
+        "category": "planning",
+        "total_units": 143,
+        "address": "1819",
+        "street": "Santa Monica Blvd",
+        "apn": "4276029011",
+        "ain": "4276029011",
+        "situs_address": "1819 SANTA MONICA BLVD SANTA MONICA CA 90404",
+        "usetype": "Commercial",
+        "usedescrip": "Parking Lots (Commercial Use Properties)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.483771,
+              34.031099
+            ],
+            [
+              -118.483889,
+              34.031004
+            ],
+            [
+              -118.484008,
+              34.030908
+            ],
+            [
+              -118.484353,
+              34.031203
+            ],
+            [
+              -118.484235,
+              34.031299
+            ],
+            [
+              -118.484116,
+              34.031395
+            ],
+            [
+              -118.483771,
+              34.031099
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1902-1908-wilshire-blvd",
+        "category": "planning",
+        "total_units": 140,
+        "address": "1902-1908",
+        "street": "Wilshire Blvd",
+        "apn": "4276008023",
+        "ain": "4276008023",
+        "situs_address": "1907 WILSHIRE BLVD SANTA MONICA CA 90403",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.483571,
+              34.030495
+            ],
+            [
+              -118.483689,
+              34.030399
+            ],
+            [
+              -118.483919,
+              34.030596
+            ],
+            [
+              -118.483801,
+              34.030692
+            ],
+            [
+              -118.483571,
+              34.030495
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-1902-1908-wilshire-blvd",
+        "category": "planning",
+        "total_units": 140,
+        "address": "1902-1908",
+        "street": "Wilshire Blvd",
+        "apn": "4276013020",
+        "ain": "4276013020",
+        "situs_address": "1902 WILSHIRE BLVD SANTA MONICA CA 90403",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.482423,
+              34.032192
+            ],
+            [
+              -118.482588,
+              34.032058
+            ],
+            [
+              -118.482818,
+              34.032255
+            ],
+            [
+              -118.482653,
+              34.032389
+            ],
+            [
+              -118.482423,
+              34.032192
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2025-2037-wilshire-blvd",
+        "category": "planning",
+        "total_units": 150,
+        "address": "2025-2037",
+        "street": "Wilshire Blvd",
+        "apn": "4276007022",
+        "ain": "4276007022",
+        "situs_address": "2033 WILSHIRE BLVD SANTA MONICA CA 90403",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.482818,
+              34.032255
+            ],
+            [
+              -118.482588,
+              34.032058
+            ],
+            [
+              -118.482707,
+              34.031962
+            ],
+            [
+              -118.482825,
+              34.031866
+            ],
+            [
+              -118.48317,
+              34.032161
+            ],
+            [
+              -118.483052,
+              34.032257
+            ],
+            [
+              -118.482933,
+              34.032353
+            ],
+            [
+              -118.482818,
+              34.032255
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2025-2037-wilshire-blvd",
+        "category": "planning",
+        "total_units": 150,
+        "address": "2025-2037",
+        "street": "Wilshire Blvd",
+        "apn": "4276007027",
+        "ain": "4276007027",
+        "situs_address": "2025 WILSHIRE BLVD SANTA MONICA CA 90403",
+        "usetype": "Commercial",
+        "usedescrip": "Restaurants, Cocktail Lounges"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.482032,
+              34.031742
+            ],
+            [
+              -118.482186,
+              34.031616
+            ],
+            [
+              -118.482417,
+              34.031813
+            ],
+            [
+              -118.482263,
+              34.031938
+            ],
+            [
+              -118.482032,
+              34.031742
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2025-2037-wilshire-blvd",
+        "category": "planning",
+        "total_units": 150,
+        "address": "2025-2037",
+        "street": "Wilshire Blvd",
+        "apn": "4276014002",
+        "ain": "4276014002",
+        "situs_address": "2030 WILSHIRE BLVD SANTA MONICA CA 90403",
+        "usetype": "Commercial",
+        "usedescrip": "Restaurants, Cocktail Lounges"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.478016,
+              34.035762
+            ],
+            [
+              -118.478101,
+              34.035694
+            ],
+            [
+              -118.47821,
+              34.035605
+            ],
+            [
+              -118.478324,
+              34.035513
+            ],
+            [
+              -118.478578,
+              34.035729
+            ],
+            [
+              -118.478464,
+              34.035822
+            ],
+            [
+              -118.478355,
+              34.03591
+            ],
+            [
+              -118.47827,
+              34.035979
+            ],
+            [
+              -118.478016,
+              34.035762
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2501-wilshire-blvd",
+        "category": "planning",
+        "total_units": 170,
+        "address": "2501",
+        "street": "Wilshire Blvd",
+        "apn": "4276001026",
+        "ain": "4276001026",
+        "situs_address": "2501 WILSHIRE BLVD SANTA MONICA CA 90403",
+        "usetype": "Commercial",
+        "usedescrip": "Store Combination"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.476728,
+              34.036001
+            ],
+            [
+              -118.476823,
+              34.035925
+            ],
+            [
+              -118.476918,
+              34.035848
+            ],
+            [
+              -118.477036,
+              34.035752
+            ],
+            [
+              -118.477289,
+              34.035968
+            ],
+            [
+              -118.477171,
+              34.036064
+            ],
+            [
+              -118.477076,
+              34.036141
+            ],
+            [
+              -118.476982,
+              34.036217
+            ],
+            [
+              -118.476728,
+              34.036001
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2600-wilshire-blvd",
+        "category": "planning",
+        "total_units": 45,
+        "address": "2600",
+        "street": "Wilshire Blvd",
+        "apn": "4267007001",
+        "ain": "4267007001",
+        "situs_address": "2600 WILSHIRE BLVD SANTA MONICA CA 90403",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.473728,
+              34.006997
+            ],
+            [
+              -118.475097,
+              34.006193
+            ],
+            [
+              -118.476079,
+              34.006924
+            ],
+            [
+              -118.476075,
+              34.006974
+            ],
+            [
+              -118.474743,
+              34.00775
+            ],
+            [
+              -118.473728,
+              34.006997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2601-2645-lincoln-blvd",
+        "category": "planning",
+        "total_units": 521,
+        "address": "2601-2645",
+        "street": "Lincoln Blvd",
+        "apn": "4285001030",
+        "ain": "4285001030",
+        "situs_address": "2601 LINCOLN BLVD SANTA MONICA CA 90405",
+        "usetype": "Commercial",
+        "usedescrip": "Shopping Centers (Neighborhood, community)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.47586,
+              34.006393
+            ],
+            [
+              -118.47608,
+              34.006188
+            ],
+            [
+              -118.47618,
+              34.006261
+            ],
+            [
+              -118.47596,
+              34.006467
+            ],
+            [
+              -118.47586,
+              34.006393
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2601-2645-lincoln-blvd",
+        "category": "planning",
+        "total_units": 521,
+        "address": "2601-2645",
+        "street": "Lincoln Blvd",
+        "apn": "4287016028",
+        "ain": "4287016028",
+        "situs_address": "2622 LINCOLN BLVD SANTA MONICA CA 90405",
+        "usetype": "Commercial",
+        "usedescrip": "Auto, Recreation EQPT, Construction EQPT, Sales & Service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.475761,
+              34.006319
+            ],
+            [
+              -118.475981,
+              34.006114
+            ],
+            [
+              -118.47608,
+              34.006188
+            ],
+            [
+              -118.47586,
+              34.006393
+            ],
+            [
+              -118.475761,
+              34.006319
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2601-2645-lincoln-blvd",
+        "category": "planning",
+        "total_units": 521,
+        "address": "2601-2645",
+        "street": "Lincoln Blvd",
+        "apn": "4287016029",
+        "ain": "4287016029",
+        "situs_address": "2626 LINCOLN BLVD SANTA MONICA CA 90405",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.475414,
+              34.006061
+            ],
+            [
+              -118.475634,
+              34.005856
+            ],
+            [
+              -118.475733,
+              34.00593
+            ],
+            [
+              -118.475513,
+              34.006135
+            ],
+            [
+              -118.475414,
+              34.006061
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2601-2645-lincoln-blvd",
+        "category": "planning",
+        "total_units": 521,
+        "address": "2601-2645",
+        "street": "Lincoln Blvd",
+        "apn": "4287016031",
+        "ain": "4287016031",
+        "situs_address": "2640 LINCOLN BLVD SANTA MONICA CA 90405",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.475613,
+              34.006208
+            ],
+            [
+              -118.475832,
+              34.006003
+            ],
+            [
+              -118.475932,
+              34.006077
+            ],
+            [
+              -118.475713,
+              34.006282
+            ],
+            [
+              -118.475613,
+              34.006208
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2601-2645-lincoln-blvd",
+        "category": "planning",
+        "total_units": 521,
+        "address": "2601-2645",
+        "street": "Lincoln Blvd",
+        "apn": "4287016049",
+        "ain": "4287016049",
+        "situs_address": "2632 LINCOLN BLVD SANTA MONICA CA 90405",
+        "usetype": "Commercial",
+        "usedescrip": "Office Buildings"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.475513,
+              34.006135
+            ],
+            [
+              -118.475733,
+              34.00593
+            ],
+            [
+              -118.475832,
+              34.006003
+            ],
+            [
+              -118.475613,
+              34.006208
+            ],
+            [
+              -118.475513,
+              34.006135
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2601-2645-lincoln-blvd",
+        "category": "planning",
+        "total_units": 521,
+        "address": "2601-2645",
+        "street": "Lincoln Blvd",
+        "apn": "4287016050",
+        "ain": "4287016050",
+        "situs_address": "2636 LINCOLN BLVD SANTA MONICA CA 90405",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.47596,
+              34.006467
+            ],
+            [
+              -118.47618,
+              34.006261
+            ],
+            [
+              -118.476279,
+              34.006335
+            ],
+            [
+              -118.476378,
+              34.006409
+            ],
+            [
+              -118.476478,
+              34.006483
+            ],
+            [
+              -118.476577,
+              34.006557
+            ],
+            [
+              -118.476671,
+              34.006627
+            ],
+            [
+              -118.476431,
+              34.006765
+            ],
+            [
+              -118.476357,
+              34.006761
+            ],
+            [
+              -118.476258,
+              34.006688
+            ],
+            [
+              -118.476158,
+              34.006615
+            ],
+            [
+              -118.476059,
+              34.00654
+            ],
+            [
+              -118.47596,
+              34.006467
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2601-2645-lincoln-blvd",
+        "category": "planning",
+        "total_units": 521,
+        "address": "2601-2645",
+        "street": "Lincoln Blvd",
+        "apn": "4287016062",
+        "ain": "4287016062",
+        "situs_address": "2602 LINCOLN BLVD SANTA MONICA CA 90405",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.458003,
+              34.018651
+            ],
+            [
+              -118.458409,
+              34.018415
+            ],
+            [
+              -118.458503,
+              34.018527
+            ],
+            [
+              -118.458504,
+              34.018527
+            ],
+            [
+              -118.458098,
+              34.018764
+            ],
+            [
+              -118.458098,
+              34.018763
+            ],
+            [
+              -118.458003,
+              34.018651
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2615-26th-st",
+        "category": "planning",
+        "total_units": 2,
+        "address": "2615",
+        "street": "26th St",
+        "apn": "4270012041",
+        "ain": "4270012041",
+        "situs_address": "2615 26TH ST SANTA MONICA CA 90405",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.474185,
+              34.038867
+            ],
+            [
+              -118.474303,
+              34.038771
+            ],
+            [
+              -118.474579,
+              34.039008
+            ],
+            [
+              -118.474462,
+              34.039103
+            ],
+            [
+              -118.474185,
+              34.038867
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-2919-wilshire-blvd",
+        "category": "planning",
+        "total_units": 127,
+        "address": "2919",
+        "street": "Wilshire Blvd",
+        "apn": "4266009019",
+        "ain": "4266009019",
+        "situs_address": "2919 WILSHIRE BLVD SANTA MONICA CA 90403",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.4899,
+              34.015819
+            ],
+            [
+              -118.489785,
+              34.015721
+            ],
+            [
+              -118.490139,
+              34.015434
+            ],
+            [
+              -118.490255,
+              34.015532
+            ],
+            [
+              -118.490369,
+              34.01563
+            ],
+            [
+              -118.490015,
+              34.015918
+            ],
+            [
+              -118.4899,
+              34.015819
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-601-609-colorado-ave",
+        "category": "planning",
+        "total_units": 264,
+        "address": "601-609",
+        "street": "Colorado Ave",
+        "apn": "4291023010",
+        "ain": "4291023010",
+        "situs_address": "609 COLORADO AVE SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.490737,
+              34.020355
+            ],
+            [
+              -118.491091,
+              34.020067
+            ],
+            [
+              -118.491206,
+              34.020166
+            ],
+            [
+              -118.490851,
+              34.020453
+            ],
+            [
+              -118.490737,
+              34.020355
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-825-santa-monica-blvd",
+        "category": "planning",
+        "total_units": 99,
+        "address": "825",
+        "street": "Santa Monica Blvd",
+        "apn": "4282010013",
+        "ain": "4282010013",
+        "situs_address": "825 SANTA MONICA BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Auto, Recreation EQPT, Construction EQPT, Sales & Service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.490621,
+              34.020256
+            ],
+            [
+              -118.490976,
+              34.019969
+            ],
+            [
+              -118.491091,
+              34.020067
+            ],
+            [
+              -118.490737,
+              34.020355
+            ],
+            [
+              -118.490621,
+              34.020256
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-825-santa-monica-blvd",
+        "category": "planning",
+        "total_units": 99,
+        "address": "825",
+        "street": "Santa Monica Blvd",
+        "apn": "4282010014",
+        "ain": "4282010014",
+        "situs_address": "825 SANTA MONICA BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Parking Lots (Commercial Use Properties)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.481402,
+              34.013261
+            ],
+            [
+              -118.481541,
+              34.013187
+            ],
+            [
+              -118.481714,
+              34.013335
+            ],
+            [
+              -118.481598,
+              34.013429
+            ],
+            [
+              -118.481402,
+              34.013261
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-901-913-pico-blvd",
+        "category": "planning",
+        "total_units": 45,
+        "address": "901-913",
+        "street": "Pico Blvd",
+        "apn": "4283021017",
+        "ain": "4283021017",
+        "situs_address": "913 PICO BLVD SANTA MONICA CA 90405",
+        "usetype": "Commercial",
+        "usedescrip": "Store Combination"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.481541,
+              34.013187
+            ],
+            [
+              -118.481689,
+              34.013109
+            ],
+            [
+              -118.481837,
+              34.013236
+            ],
+            [
+              -118.481837,
+              34.013236
+            ],
+            [
+              -118.481714,
+              34.013335
+            ],
+            [
+              -118.481541,
+              34.013187
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-901-913-pico-blvd",
+        "category": "planning",
+        "total_units": 45,
+        "address": "901-913",
+        "street": "Pico Blvd",
+        "apn": "4283021018",
+        "ain": "4283021018",
+        "situs_address": "907 PICO BLVD SANTA MONICA CA 90405",
+        "usetype": "Commercial",
+        "usedescrip": "Store Combination"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.481689,
+              34.013109
+            ],
+            [
+              -118.481828,
+              34.013035
+            ],
+            [
+              -118.481953,
+              34.013142
+            ],
+            [
+              -118.481837,
+              34.013236
+            ],
+            [
+              -118.481689,
+              34.013109
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "planning-901-913-pico-blvd",
+        "category": "planning",
+        "total_units": 45,
+        "address": "901-913",
+        "street": "Pico Blvd",
+        "apn": "4283021019",
+        "ain": "4283021019",
+        "situs_address": "901 PICO BLVD SANTA MONICA CA 90405",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.48205,
+              34.03386
+            ],
+            [
+              -118.482363,
+              34.033605
+            ],
+            [
+              -118.48247,
+              34.033696
+            ],
+            [
+              -118.482155,
+              34.03395
+            ],
+            [
+              -118.48205,
+              34.03386
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1121-22nd-st",
+        "category": "under_construction",
+        "total_units": 3,
+        "address": "1121",
+        "street": "22nd St",
+        "apn": "4276005044",
+        "ain": "4276005044",
+        "situs_address": "1121 22ND ST SANTA MONICA CA 90403",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.487151,
+              34.003974
+            ],
+            [
+              -118.487202,
+              34.003942
+            ],
+            [
+              -118.487268,
+              34.0039
+            ],
+            [
+              -118.487283,
+              34.003891
+            ],
+            [
+              -118.487538,
+              34.004144
+            ],
+            [
+              -118.487411,
+              34.004232
+            ],
+            [
+              -118.487151,
+              34.003974
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-122-strand-st",
+        "category": "under_construction",
+        "total_units": 3,
+        "address": "122",
+        "street": "Strand St",
+        "apn": "4289023025",
+        "ain": "4289023025",
+        "situs_address": "122 STRAND ST SANTA MONICA CA 90405",
+        "usetype": "Residential",
+        "usedescrip": "Four Units (Any Combination)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.470173,
+              34.037492
+            ],
+            [
+              -118.470558,
+              34.037181
+            ],
+            [
+              -118.470669,
+              34.037276
+            ],
+            [
+              -118.470284,
+              34.037587
+            ],
+            [
+              -118.470173,
+              34.037492
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1342-berkeley",
+        "category": "under_construction",
+        "total_units": 8,
+        "address": "1342",
+        "street": "Berkeley",
+        "apn": "4267012009",
+        "ain": "4267012009",
+        "situs_address": "1342 BERKELEY ST SANTA MONICA CA 90404",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.489906,
+              34.02122
+            ],
+            [
+              -118.490142,
+              34.021028
+            ],
+            [
+              -118.490257,
+              34.021126
+            ],
+            [
+              -118.490021,
+              34.021318
+            ],
+            [
+              -118.489906,
+              34.02122
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1348-10th",
+        "category": "under_construction",
+        "total_units": 1,
+        "address": "1348",
+        "street": "10th",
+        "apn": "4282011011",
+        "ain": "4282011011",
+        "situs_address": "1348 10TH ST SANTA MONICA CA 90401",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.478864,
+              34.018976
+            ],
+            [
+              -118.478703,
+              34.018838
+            ],
+            [
+              -118.479058,
+              34.018551
+            ],
+            [
+              -118.479219,
+              34.018689
+            ],
+            [
+              -118.479334,
+              34.018787
+            ],
+            [
+              -118.478979,
+              34.019075
+            ],
+            [
+              -118.478864,
+              34.018976
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1413-michigan-ave",
+        "category": "under_construction",
+        "total_units": 58,
+        "address": "1413",
+        "street": "Michigan Ave",
+        "apn": "4283013024",
+        "ain": "4283013024",
+        "situs_address": "1413 MICHIGAN AVE SANTA MONICA CA 90404",
+        "usetype": "Commercial",
+        "usedescrip": "Store Combination"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.489919,
+              34.018986
+            ],
+            [
+              -118.490274,
+              34.018698
+            ],
+            [
+              -118.490388,
+              34.018797
+            ],
+            [
+              -118.490034,
+              34.019085
+            ],
+            [
+              -118.489919,
+              34.018986
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1430-1444-lincoln-blvd",
+        "category": "under_construction",
+        "total_units": 100,
+        "address": "1430-1444",
+        "street": "Lincoln Blvd",
+        "apn": "4282027018",
+        "ain": "4282027018",
+        "situs_address": "1437 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Residential",
+        "usedescrip": "Rooming Houses"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.490034,
+              34.019085
+            ],
+            [
+              -118.490388,
+              34.018797
+            ],
+            [
+              -118.490503,
+              34.018895
+            ],
+            [
+              -118.490149,
+              34.019183
+            ],
+            [
+              -118.490034,
+              34.019085
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1430-1444-lincoln-blvd",
+        "category": "under_construction",
+        "total_units": 100,
+        "address": "1430-1444",
+        "street": "Lincoln Blvd",
+        "apn": "4282027019",
+        "ain": "4282027019",
+        "situs_address": "1431 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.489803,
+              34.018888
+            ],
+            [
+              -118.490159,
+              34.0186
+            ],
+            [
+              -118.490274,
+              34.018698
+            ],
+            [
+              -118.489919,
+              34.018986
+            ],
+            [
+              -118.489803,
+              34.018888
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1430-1444-lincoln-blvd",
+        "category": "under_construction",
+        "total_units": 100,
+        "address": "1430-1444",
+        "street": "Lincoln Blvd",
+        "apn": "4282027028",
+        "ain": "4282027028",
+        "situs_address": "1443 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Stores"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.490692,
+              34.018742
+            ],
+            [
+              -118.491047,
+              34.018455
+            ],
+            [
+              -118.491162,
+              34.018553
+            ],
+            [
+              -118.490807,
+              34.018841
+            ],
+            [
+              -118.490692,
+              34.018742
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1430-1444-lincoln-blvd",
+        "category": "under_construction",
+        "total_units": 100,
+        "address": "1430-1444",
+        "street": "Lincoln Blvd",
+        "apn": "4291021006",
+        "ain": "4291021006",
+        "situs_address": "1430 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Parking Lots (Commercial Use Properties)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.490578,
+              34.018644
+            ],
+            [
+              -118.490932,
+              34.018356
+            ],
+            [
+              -118.491047,
+              34.018455
+            ],
+            [
+              -118.490692,
+              34.018742
+            ],
+            [
+              -118.490578,
+              34.018644
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1430-1444-lincoln-blvd",
+        "category": "under_construction",
+        "total_units": 100,
+        "address": "1430-1444",
+        "street": "Lincoln Blvd",
+        "apn": "4291021007",
+        "ain": "4291021007",
+        "situs_address": "1432 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Parking Lots (Commercial Use Properties)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.49052,
+              34.018595
+            ],
+            [
+              -118.490875,
+              34.018307
+            ],
+            [
+              -118.490932,
+              34.018356
+            ],
+            [
+              -118.490578,
+              34.018644
+            ],
+            [
+              -118.49052,
+              34.018595
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1430-1444-lincoln-blvd",
+        "category": "under_construction",
+        "total_units": 100,
+        "address": "1430-1444",
+        "street": "Lincoln Blvd",
+        "apn": "4291021008",
+        "ain": "4291021008",
+        "situs_address": "1438 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Parking Lots (Commercial Use Properties)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.490347,
+              34.018447
+            ],
+            [
+              -118.490702,
+              34.01816
+            ],
+            [
+              -118.490817,
+              34.018258
+            ],
+            [
+              -118.490462,
+              34.018545
+            ],
+            [
+              -118.490347,
+              34.018447
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1430-1444-lincoln-blvd",
+        "category": "under_construction",
+        "total_units": 100,
+        "address": "1430-1444",
+        "street": "Lincoln Blvd",
+        "apn": "4291021010",
+        "ain": "4291021010",
+        "situs_address": "1444 LINCOLN BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Parking Lots (Commercial Use Properties)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.465546,
+              34.035967
+            ],
+            [
+              -118.465919,
+              34.035666
+            ],
+            [
+              -118.466034,
+              34.035764
+            ],
+            [
+              -118.465661,
+              34.036066
+            ],
+            [
+              -118.465546,
+              34.035967
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1541-franklin-st",
+        "category": "under_construction",
+        "total_units": 5,
+        "address": "1541",
+        "street": "Franklin St",
+        "apn": "4267028017",
+        "ain": "4267028017",
+        "situs_address": "1541 FRANKLIN ST SANTA MONICA CA 90404",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.487837,
+              34.017875
+            ],
+            [
+              -118.488192,
+              34.017588
+            ],
+            [
+              -118.488307,
+              34.017686
+            ],
+            [
+              -118.487952,
+              34.017973
+            ],
+            [
+              -118.487837,
+              34.017875
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1546-9th",
+        "category": "under_construction",
+        "total_units": 9,
+        "address": "1546",
+        "street": "9th",
+        "apn": "4282028007",
+        "ain": "4282028007",
+        "situs_address": "1546 9TH ST SANTA MONICA CA 90401",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.475815,
+              34.024741
+            ],
+            [
+              -118.476062,
+              34.024541
+            ],
+            [
+              -118.476062,
+              34.024541
+            ],
+            [
+              -118.476177,
+              34.024639
+            ],
+            [
+              -118.476177,
+              34.024639
+            ],
+            [
+              -118.476394,
+              34.024825
+            ],
+            [
+              -118.476182,
+              34.024941
+            ],
+            [
+              -118.47597,
+              34.025054
+            ],
+            [
+              -118.475967,
+              34.025055
+            ],
+            [
+              -118.475965,
+              34.025057
+            ],
+            [
+              -118.475818,
+              34.024931
+            ],
+            [
+              -118.475817,
+              34.024931
+            ],
+            [
+              -118.475703,
+              34.024832
+            ],
+            [
+              -118.475815,
+              34.024741
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1634-20th-st",
+        "category": "under_construction",
+        "total_units": 78,
+        "address": "1634",
+        "street": "20th St",
+        "apn": "4275025002",
+        "ain": "4275025002",
+        "situs_address": "1634 20TH ST SANTA MONICA CA 90404",
+        "usetype": "Industrial",
+        "usedescrip": "Warehousing, Distribution, Storage"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.486848,
+              34.015456
+            ],
+            [
+              -118.487207,
+              34.015166
+            ],
+            [
+              -118.487321,
+              34.015265
+            ],
+            [
+              -118.486963,
+              34.015554
+            ],
+            [
+              -118.486848,
+              34.015456
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1650-1660-lincoln-blvd",
+        "category": "under_construction",
+        "total_units": 98,
+        "address": "1650-1660",
+        "street": "Lincoln Blvd",
+        "apn": "4290002006",
+        "ain": "4290002006",
+        "situs_address": "1660 LINCOLN BLVD SANTA MONICA CA 90404",
+        "usetype": "Industrial",
+        "usedescrip": "Warehousing, Distribution, Storage"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.486963,
+              34.015554
+            ],
+            [
+              -118.487321,
+              34.015265
+            ],
+            [
+              -118.487435,
+              34.015364
+            ],
+            [
+              -118.487079,
+              34.015653
+            ],
+            [
+              -118.486963,
+              34.015554
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1650-1660-lincoln-blvd",
+        "category": "under_construction",
+        "total_units": 98,
+        "address": "1650-1660",
+        "street": "Lincoln Blvd",
+        "apn": "4290002007",
+        "ain": "4290002007",
+        "situs_address": "1658 LINCOLN BLVD SANTA MONICA CA 90404",
+        "usetype": "Industrial",
+        "usedescrip": "Warehousing, Distribution, Storage"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.487194,
+              34.015751
+            ],
+            [
+              -118.487079,
+              34.015653
+            ],
+            [
+              -118.487435,
+              34.015364
+            ],
+            [
+              -118.487549,
+              34.015463
+            ],
+            [
+              -118.487658,
+              34.015557
+            ],
+            [
+              -118.487355,
+              34.015881
+            ],
+            [
+              -118.487351,
+              34.015885
+            ],
+            [
+              -118.487194,
+              34.015751
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1650-1660-lincoln-blvd",
+        "category": "under_construction",
+        "total_units": 98,
+        "address": "1650-1660",
+        "street": "Lincoln Blvd",
+        "apn": "4290002008",
+        "ain": "4290002008",
+        "situs_address": "1650 LINCOLN BLVD SANTA MONICA CA 90404",
+        "usetype": "Industrial",
+        "usedescrip": "Lgt Manf.Sm. EQPT. Manuf Sm.Shps Instr.Manuf. Prnt Plnts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.472148,
+              34.021789
+            ],
+            [
+              -118.472044,
+              34.0217
+            ],
+            [
+              -118.472403,
+              34.021409
+            ],
+            [
+              -118.472518,
+              34.021507
+            ],
+            [
+              -118.47217,
+              34.021789
+            ],
+            [
+              -118.472148,
+              34.021789
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-1900-20th-st",
+        "category": "under_construction",
+        "total_units": 3,
+        "address": "1900",
+        "street": "20th St",
+        "apn": "4274019056",
+        "ain": "4274019056",
+        "situs_address": "1900 20TH ST SANTA MONICA CA 90404",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.469027,
+              34.021378
+            ],
+            [
+              -118.469382,
+              34.02109
+            ],
+            [
+              -118.469493,
+              34.021185
+            ],
+            [
+              -118.469138,
+              34.021473
+            ],
+            [
+              -118.469027,
+              34.021378
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-2002-2008-21st",
+        "category": "under_construction",
+        "total_units": 19,
+        "address": "2002-2008",
+        "street": "21st",
+        "apn": "4274025002",
+        "ain": "4274025002",
+        "situs_address": "2007 21ST ST SANTA MONICA CA 90404",
+        "usetype": "Residential",
+        "usedescrip": "Three Units (Any Combination)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.469601,
+              34.021081
+            ],
+            [
+              -118.469938,
+              34.020808
+            ],
+            [
+              -118.470059,
+              34.020912
+            ],
+            [
+              -118.469722,
+              34.021185
+            ],
+            [
+              -118.469601,
+              34.021081
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-2002-2008-21st",
+        "category": "under_construction",
+        "total_units": 19,
+        "address": "2002-2008",
+        "street": "21st",
+        "apn": "4274026001",
+        "ain": "4274026001",
+        "situs_address": "2002 21ST ST SANTA MONICA CA 90404",
+        "usetype": "Residential",
+        "usedescrip": "Three Units (Any Combination)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.469486,
+              34.020982
+            ],
+            [
+              -118.469823,
+              34.020709
+            ],
+            [
+              -118.469938,
+              34.020808
+            ],
+            [
+              -118.469601,
+              34.021081
+            ],
+            [
+              -118.469486,
+              34.020982
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-2002-2008-21st",
+        "category": "under_construction",
+        "total_units": 19,
+        "address": "2002-2008",
+        "street": "21st",
+        "apn": "4274026003",
+        "ain": "4274026003",
+        "situs_address": "2008 21ST ST SANTA MONICA CA 90404",
+        "usetype": "Residential",
+        "usedescrip": "Four Units (Any Combination)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.488244,
+              34.007313
+            ],
+            [
+              -118.488117,
+              34.007186
+            ],
+            [
+              -118.488243,
+              34.007098
+            ],
+            [
+              -118.48837,
+              34.007225
+            ],
+            [
+              -118.488498,
+              34.007351
+            ],
+            [
+              -118.488371,
+              34.00744
+            ],
+            [
+              -118.488244,
+              34.007313
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-212-bay-st",
+        "category": "under_construction",
+        "total_units": 3,
+        "address": "212",
+        "street": "Bay St",
+        "apn": "4289018056",
+        "ain": "4289018056",
+        "situs_address": "212 BAY ST SANTA MONICA CA 90405",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.465388,
+              34.015397
+            ],
+            [
+              -118.465753,
+              34.015184
+            ],
+            [
+              -118.465848,
+              34.015296
+            ],
+            [
+              -118.465483,
+              34.015509
+            ],
+            [
+              -118.465388,
+              34.015397
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-2425-20th",
+        "category": "under_construction",
+        "total_units": 3,
+        "address": "2425",
+        "street": "20th",
+        "apn": "4273019001",
+        "ain": "4273019001",
+        "situs_address": "2425 20TH ST SANTA MONICA CA 90405",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.483453,
+              34.003669
+            ],
+            [
+              -118.48378,
+              34.00344
+            ],
+            [
+              -118.483886,
+              34.003546
+            ],
+            [
+              -118.483559,
+              34.003774
+            ],
+            [
+              -118.483453,
+              34.003669
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-2501-2nd-st",
+        "category": "under_construction",
+        "total_units": 3,
+        "address": "2501",
+        "street": "2nd St",
+        "apn": "4287010011",
+        "ain": "4287010011",
+        "situs_address": "2501 2ND ST SANTA MONICA CA 90405",
+        "usetype": "Residential",
+        "usedescrip": "Two Units"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.468348,
+              34.035231
+            ],
+            [
+              -118.468733,
+              34.034921
+            ],
+            [
+              -118.468825,
+              34.034999
+            ],
+            [
+              -118.468441,
+              34.03531
+            ],
+            [
+              -118.468348,
+              34.035231
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-3004-broadway",
+        "category": "under_construction",
+        "total_units": 4,
+        "address": "3004",
+        "street": "Broadway",
+        "apn": "4267026001",
+        "ain": "4267026001",
+        "situs_address": "3004 BROADWAY SANTA MONICA CA 90404",
+        "usetype": "Residential",
+        "usedescrip": "Four Units (Any Combination)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.471507,
+              34.041308
+            ],
+            [
+              -118.471368,
+              34.041189
+            ],
+            [
+              -118.471365,
+              34.041186
+            ],
+            [
+              -118.471363,
+              34.041183
+            ],
+            [
+              -118.471361,
+              34.041179
+            ],
+            [
+              -118.471359,
+              34.041175
+            ],
+            [
+              -118.471359,
+              34.041171
+            ],
+            [
+              -118.471359,
+              34.041167
+            ],
+            [
+              -118.47136,
+              34.041163
+            ],
+            [
+              -118.471361,
+              34.041159
+            ],
+            [
+              -118.471363,
+              34.041156
+            ],
+            [
+              -118.471366,
+              34.041153
+            ],
+            [
+              -118.471369,
+              34.04115
+            ],
+            [
+              -118.471582,
+              34.040977
+            ],
+            [
+              -118.471744,
+              34.041116
+            ],
+            [
+              -118.471882,
+              34.041235
+            ],
+            [
+              -118.471645,
+              34.041426
+            ],
+            [
+              -118.471507,
+              34.041308
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-3223-wilshire-blvd",
+        "category": "under_construction",
+        "total_units": 53,
+        "address": "3223",
+        "street": "Wilshire Blvd",
+        "apn": "4266001045",
+        "ain": "4266001045",
+        "situs_address": "3223 WILSHIRE BLVD SANTA MONICA CA 90403",
+        "usetype": "Commercial",
+        "usedescrip": "Office Buildings"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.49241,
+              34.016391
+            ],
+            [
+              -118.492295,
+              34.016293
+            ],
+            [
+              -118.49265,
+              34.016005
+            ],
+            [
+              -118.492765,
+              34.016104
+            ],
+            [
+              -118.49288,
+              34.016202
+            ],
+            [
+              -118.492525,
+              34.01649
+            ],
+            [
+              -118.49241,
+              34.016391
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-501-broadway",
+        "category": "under_construction",
+        "total_units": 94,
+        "address": "501",
+        "street": "Broadway",
+        "apn": "4291019027",
+        "ain": "4291019027",
+        "situs_address": "501 BROADWAY SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Office Buildings"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.496092,
+              34.021113
+            ],
+            [
+              -118.49621,
+              34.021018
+            ],
+            [
+              -118.49644,
+              34.021214
+            ],
+            [
+              -118.496321,
+              34.02131
+            ],
+            [
+              -118.496092,
+              34.021113
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-601-611-wilshire-blvd",
+        "category": "under_construction",
+        "total_units": 40,
+        "address": "601-611",
+        "street": "Wilshire Blvd",
+        "apn": "4292005026",
+        "ain": "4292005026",
+        "situs_address": "611 WILSHIRE BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Office Buildings"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.49621,
+              34.021018
+            ],
+            [
+              -118.496328,
+              34.020922
+            ],
+            [
+              -118.496446,
+              34.020826
+            ],
+            [
+              -118.496676,
+              34.021023
+            ],
+            [
+              -118.496558,
+              34.021119
+            ],
+            [
+              -118.49644,
+              34.021214
+            ],
+            [
+              -118.49621,
+              34.021018
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-601-611-wilshire-blvd",
+        "category": "under_construction",
+        "total_units": 40,
+        "address": "601-611",
+        "street": "Wilshire Blvd",
+        "apn": "4292005029",
+        "ain": "4292005029",
+        "situs_address": "601 WILSHIRE BLVD SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Office Buildings"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.489415,
+              34.016979
+            ],
+            [
+              -118.489769,
+              34.016692
+            ],
+            [
+              -118.48977,
+              34.016691
+            ],
+            [
+              -118.489885,
+              34.01679
+            ],
+            [
+              -118.49,
+              34.016888
+            ],
+            [
+              -118.490115,
+              34.016987
+            ],
+            [
+              -118.49023,
+              34.017085
+            ],
+            [
+              -118.490345,
+              34.017184
+            ],
+            [
+              -118.49046,
+              34.017282
+            ],
+            [
+              -118.490552,
+              34.017361
+            ],
+            [
+              -118.490551,
+              34.0174
+            ],
+            [
+              -118.49022,
+              34.017668
+            ],
+            [
+              -118.49022,
+              34.017668
+            ],
+            [
+              -118.490205,
+              34.017655
+            ],
+            [
+              -118.490105,
+              34.01757
+            ],
+            [
+              -118.48999,
+              34.017471
+            ],
+            [
+              -118.489875,
+              34.017373
+            ],
+            [
+              -118.48976,
+              34.017274
+            ],
+            [
+              -118.489645,
+              34.017176
+            ],
+            [
+              -118.48953,
+              34.017077
+            ],
+            [
+              -118.489415,
+              34.016979
+            ],
+            [
+              -118.489415,
+              34.016979
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-710-broadway",
+        "category": "under_construction",
+        "total_units": 280,
+        "address": "710",
+        "street": "Broadway",
+        "apn": "4291022026",
+        "ain": "4291022026",
+        "situs_address": "710 BROADWAY SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Supermarkets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.48884,
+              34.016486
+            ],
+            [
+              -118.489017,
+              34.016343
+            ],
+            [
+              -118.489018,
+              34.016343
+            ],
+            [
+              -118.489132,
+              34.016441
+            ],
+            [
+              -118.489247,
+              34.01654
+            ],
+            [
+              -118.489246,
+              34.01654
+            ],
+            [
+              -118.48907,
+              34.016683
+            ],
+            [
+              -118.488955,
+              34.016585
+            ],
+            [
+              -118.48884,
+              34.016487
+            ],
+            [
+              -118.48884,
+              34.016486
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-711-colorado-ave",
+        "category": "under_construction",
+        "total_units": 56,
+        "address": "711",
+        "street": "Colorado Ave",
+        "apn": "4291022012",
+        "ain": "4291022012",
+        "situs_address": "711 COLORADO AVE SANTA MONICA CA 90401",
+        "usetype": "Commercial",
+        "usedescrip": "Parking Lots (Commercial Use Properties)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -118.495716,
+              34.027094
+            ],
+            [
+              -118.496071,
+              34.026806
+            ],
+            [
+              -118.496186,
+              34.026904
+            ],
+            [
+              -118.495831,
+              34.027192
+            ],
+            [
+              -118.495716,
+              34.027094
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "dev_id": "under-construction-949-10th-st",
+        "category": "under_construction",
+        "total_units": 3,
+        "address": "949",
+        "street": "10th St",
+        "apn": "4281025082",
+        "ain": "4281025082",
+        "situs_address": "949 10TH ST SANTA MONICA CA 90403",
+        "usetype": "Residential",
+        "usedescrip": "Single"
+      }
+    }
+  ]
+}

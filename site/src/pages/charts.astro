@@ -1,0 +1,295 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { dataUrl } from '../lib/dataUrl';
+
+// Resolve the build-time data artifact through the Pages base path. Pass it to
+// the client script as a data attribute so the bundled module never hardcodes a
+// root-relative URL (which would 404 under the /propr-report project base).
+const cumulativeUrl = dataUrl('data/cumulative.json');
+---
+
+<Layout title="Charts — Santa Monica Prop R">
+  <h1>Cumulative Proposition R Achievements</h1>
+  <p class="intro">
+    Proposition R requires that 30% of newly constructed multifamily housing in
+    Santa Monica be affordable to low- and moderate-income households. The charts
+    below track the <em>Cumulative Proposition R Achievements</em> series
+    (Attachment B of the City's annual reports) for each fiscal year from
+    FY 1994-95 through FY 2024-25. Each row counts all new multifamily residences
+    completed citywide that year, split into market-rate and affordable. Percent
+    columns are the report's own rounded display values.
+  </p>
+
+  <section class="chart-block">
+    <h2>Residences completed by fiscal year</h2>
+    <div class="chart" id="chart-residences" data-cumulative-url={cumulativeUrl}></div>
+    <p class="caption">
+      Total new multifamily residences each fiscal year, stacked into affordable
+      and market-rate shares. Source: Santa Monica Proposition R reports,
+      Attachment B (cumulative).
+    </p>
+  </section>
+
+  <section class="chart-block">
+    <h2>Percent affordable vs. the 30% Prop R mandate</h2>
+    <div class="chart" id="chart-pct-affordable"></div>
+    <p class="caption">
+      Affordable share of all new multifamily residences each fiscal year. The
+      dashed rule marks the Prop R 30% mandate; bars below the line (and years
+      with no completions) are shaded differently. Source: Santa Monica
+      Proposition R reports, Attachment B.
+    </p>
+  </section>
+
+  <section class="chart-block">
+    <h2>City-funded affordable residences by fiscal year</h2>
+    <div class="chart" id="chart-city-funded"></div>
+    <p class="caption">
+      City-funded affordable residences per fiscal year — the 100%-affordable
+      subset of the affordable count, produced with City funding. Source: Santa
+      Monica Proposition R reports, Attachment B.
+    </p>
+  </section>
+
+  <section class="chart-block">
+    <h2>Prop R compliance by fiscal year</h2>
+    <div class="chart" id="chart-compliance"></div>
+    <p class="caption">
+      Whether Prop R compliance was achieved each fiscal year. "N/A" marks years
+      with no new multifamily completions to measure. Source: Santa Monica
+      Proposition R reports, Attachment B.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .intro {
+    max-width: 60ch;
+    color: var(--muted);
+  }
+
+  .chart-block {
+    margin: 2.5rem 0;
+  }
+
+  .chart-block h2 {
+    margin-bottom: 0.25rem;
+    font-size: 1.25rem;
+  }
+
+  .chart {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .caption {
+    margin-top: 0.5rem;
+    color: var(--muted);
+    font-size: 0.875rem;
+    max-width: 70ch;
+  }
+
+  /* Plot renders SVG/figure nodes; keep them fluid inside the container. */
+  .chart :global(figure) {
+    margin: 0;
+  }
+
+  .chart :global(svg) {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
+<script>
+  import * as Plot from '@observablehq/plot';
+
+  interface Row {
+    fiscal_year: string;
+    total_residences: number;
+    market_rate_residences: number;
+    affordable_residences: number;
+    pct_affordable: number;
+    pct_very_low_and_low_income: number;
+    city_funded_affordable_residences: number;
+    pct_affordable_city_funded: number;
+    prop_r_compliance: string;
+  }
+
+  const PROP_R_MANDATE = 30;
+
+  // Color palette, kept consistent across charts.
+  const COLOR_AFFORDABLE = '#1d6fb8';
+  const COLOR_MARKET = '#b8c4d0';
+  const COLOR_BELOW = '#c0392b';
+  const COLOR_COMPLIANCE: Record<string, string> = {
+    Yes: '#2e8b57',
+    No: '#c0392b',
+    'N/A': '#b8b8b8',
+  };
+
+  // Shared x-axis options: 31 fiscal years, so rotate ticks to keep them legible.
+  function xAxisOpts() {
+    return {
+      label: 'Fiscal year',
+      tickRotate: -60,
+      tickSize: 4,
+    } as const;
+  }
+
+  function fetchData(url: string): Promise<Row[]> {
+    return fetch(url).then((r) => {
+      if (!r.ok) throw new Error(`Failed to load ${url}: ${r.status}`);
+      return r.json() as Promise<Row[]>;
+    });
+  }
+
+  function residencesChart(data: Row[], width: number) {
+    // Long-form for a stacked bar: one entry per (year, category).
+    const long = data.flatMap((d) => [
+      { fiscal_year: d.fiscal_year, category: 'Affordable', units: d.affordable_residences },
+      { fiscal_year: d.fiscal_year, category: 'Market rate', units: d.market_rate_residences },
+    ]);
+    return Plot.plot({
+      width,
+      height: 420,
+      marginBottom: 70,
+      marginLeft: 50,
+      x: { ...xAxisOpts() },
+      y: { label: 'Residences', grid: true },
+      color: {
+        legend: true,
+        domain: ['Affordable', 'Market rate'],
+        range: [COLOR_AFFORDABLE, COLOR_MARKET],
+      },
+      marks: [
+        Plot.barY(long, {
+          x: 'fiscal_year',
+          y: 'units',
+          fill: 'category',
+          order: ['Market rate', 'Affordable'],
+          title: (d) => `${d.fiscal_year}\n${d.category}: ${d.units}`,
+        }),
+        Plot.ruleY([0]),
+      ],
+    });
+  }
+
+  function pctAffordableChart(data: Row[], width: number) {
+    return Plot.plot({
+      width,
+      height: 420,
+      marginBottom: 70,
+      marginLeft: 50,
+      x: { ...xAxisOpts() },
+      y: { label: '% affordable', grid: true, domain: [0, Math.max(100, ...data.map((d) => d.pct_affordable))] },
+      marks: [
+        Plot.barY(data, {
+          x: 'fiscal_year',
+          y: 'pct_affordable',
+          fill: (d) => (d.pct_affordable >= PROP_R_MANDATE ? COLOR_AFFORDABLE : COLOR_BELOW),
+          title: (d) => `${d.fiscal_year}\n${d.pct_affordable}% affordable`,
+        }),
+        Plot.ruleY([PROP_R_MANDATE], { stroke: '#1a1a1a', strokeDasharray: '4,3' }),
+        Plot.text([{ x: data[0]?.fiscal_year, y: PROP_R_MANDATE }], {
+          x: 'x',
+          y: 'y',
+          text: () => 'Prop R 30% mandate',
+          dy: -6,
+          textAnchor: 'start',
+          fontWeight: 600,
+          fill: '#1a1a1a',
+        }),
+        Plot.ruleY([0]),
+      ],
+    });
+  }
+
+  function cityFundedChart(data: Row[], width: number) {
+    return Plot.plot({
+      width,
+      height: 420,
+      marginBottom: 70,
+      marginLeft: 50,
+      x: { ...xAxisOpts() },
+      y: { label: 'City-funded affordable residences', grid: true },
+      marks: [
+        Plot.barY(data, {
+          x: 'fiscal_year',
+          y: 'city_funded_affordable_residences',
+          fill: COLOR_AFFORDABLE,
+          title: (d) => `${d.fiscal_year}\nCity-funded affordable: ${d.city_funded_affordable_residences}`,
+        }),
+        Plot.ruleY([0]),
+      ],
+    });
+  }
+
+  function complianceChart(data: Row[], width: number) {
+    const domain = ['Yes', 'No', 'N/A'];
+    return Plot.plot({
+      width,
+      height: 160,
+      marginBottom: 70,
+      marginLeft: 50,
+      x: { ...xAxisOpts() },
+      y: { axis: null },
+      color: {
+        legend: true,
+        domain,
+        range: domain.map((k) => COLOR_COMPLIANCE[k]),
+      },
+      marks: [
+        Plot.cell(data, {
+          x: 'fiscal_year',
+          fill: (d) => (domain.includes(d.prop_r_compliance) ? d.prop_r_compliance : 'N/A'),
+          inset: 1,
+          title: (d) => `${d.fiscal_year}\nCompliance: ${d.prop_r_compliance}`,
+        }),
+      ],
+    });
+  }
+
+  type ChartFn = (data: Row[], width: number) => (SVGSVGElement | HTMLElement);
+
+  const charts: { id: string; render: ChartFn }[] = [
+    { id: 'chart-residences', render: residencesChart },
+    { id: 'chart-pct-affordable', render: pctAffordableChart },
+    { id: 'chart-city-funded', render: cityFundedChart },
+    { id: 'chart-compliance', render: complianceChart },
+  ];
+
+  function renderAll(data: Row[]) {
+    for (const { id, render } of charts) {
+      const container = document.getElementById(id);
+      if (!container) continue;
+      const width = Math.max(320, container.clientWidth || 640);
+      container.replaceChildren(render(data, width));
+    }
+  }
+
+  function debounce<T extends (...args: any[]) => void>(fn: T, ms: number): T {
+    let t: ReturnType<typeof setTimeout> | undefined;
+    return ((...args: any[]) => {
+      clearTimeout(t);
+      t = setTimeout(() => fn(...args), ms);
+    }) as T;
+  }
+
+  async function init() {
+    const anchor = document.getElementById('chart-residences');
+    const url = anchor?.dataset.cumulativeUrl;
+    if (!url) return;
+    try {
+      const data = await fetchData(url);
+      renderAll(data);
+      window.addEventListener('resize', debounce(() => renderAll(data), 150));
+    } catch (err) {
+      console.error(err);
+      if (anchor) {
+        anchor.textContent = 'Unable to load chart data.';
+      }
+    }
+  }
+
+  init();
+</script>

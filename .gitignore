@@ -15,6 +15,12 @@ dist/
 .cache/
 *.tsbuildinfo
 
+# Astro site build outputs and generated data
+site/node_modules/
+site/dist/
+site/.astro/
+site/public/data/
+
 # Editor / OS
 .DS_Store
 Thumbs.db

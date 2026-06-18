@@ -1,0 +1,59 @@
+dev_id,category,project_id,address,street,description,zoning,date_iso,date_raw,eli,vli,li,moderate,above_moderate,affordable_units,market_units,total_units,source_fiscal_year,note
+completed-1413-michigan-ave,completed,20ENT-0020,1413,Michigan Ave,100% Affordable Housing,NC,2024-05-23,05/23/2024,0,57,1,0,0,58,0,58,2023-24,
+completed-2729-wilshire-blvd,completed,19ENT-0028,2729,Wilshire Blvd,Mixed use Project with Commercial,MUB,2024-01-31,1/31/2024,0,0,1,0,8,1,8,9,2023-24,
+completed-1235-5th-st,completed,17ENT-0275,1235,5th St,Mixed Use,NV,2024-01-25,1/25/2024,0,2,1,2,18,5,18,23,2023-24,
+completed-930-15th-st,completed,19ENT-0123,930,15th St,3-Unit Condos,R2,2023-11-17,11/17/2023,0,0,0,0,3,0,3,3,2023-24,
+completed-2903-2931-lincoln-blvd,completed,16ENT-0035,2903-2931,Lincoln Blvd,2903-2931 Lincoln Boulevard Mixed Use,GC,2023-11-17,11/17/2023,0,4,0,0,43,4,43,47,2023-24,
+completed-1560-lincoln-blvd,completed,12DEV-017,1560,Lincoln Blvd,Mixed Use DA (Denny's site),MUB,2023-11-02,11/2/2023,0,15,5,0,80,20,80,100,2023-24,
+completed-1450-cloverfield,completed,17ENT-0096,1450,Cloverfield,Mixed Use,MUBL,2023-09-21,9/21/2023,0,3,0,0,32,3,32,35,2023-24,
+completed-1840-17th-street,completed,16ENT-0011,1840,17th Street,5 Unit Condos,R2,2024-08-06,8/6/2024,0,0,1,0,4,1,4,5,2024-25,
+completed-1541-franklin-st,completed,16BLD-1072,1541,Franklin St.,Apartments,R2,2024-11-26,11/26/2024,0,0,0,1,4,1,4,5,2024-25,
+completed-949-10th-street,completed,18ENT-0258,949,10th Street,3 Unit Condos,R2,2025-01-30,1/30/2025,0,0,0,0,3,0,3,3,2024-25,
+completed-212-bay-st,completed,18ENT-0008,212,Bay St,3 Unit Condos,NC,2025-03-25,3/25/2025,0,0,0,0,3,0,3,3,2024-25,
+completed-711-colorado-ave,completed,18ENT-0129,711,Colorado Ave,Mixed use 100% affordable housing,TA,2025-05-01,5/1/2025,17,0,0,39,0,56,0,56,2024-25,
+under-construction-1541-franklin-st,under_construction,,1541,Franklin St,,,2017-07-31,7/31/2017,0,0,0,1,4,1,4,5,2024-25,
+under-construction-212-bay-st,under_construction,,212,Bay St,,,2018-06-11,6/11/2018,0,0,0,0,3,0,3,3,2024-25,in-lieu fee
+under-construction-122-strand-st,under_construction,,122,Strand St,,,2019-06-03,6/3/2019,0,0,0,0,3,0,3,3,2024-25,in-lieu fee
+under-construction-2512-7th-st,under_construction,,2512,7th St,,,2019-06-24,6/24/2019,0,0,0,0,3,0,3,3,2024-25,in-lieu fee
+under-construction-1900-20th-st,under_construction,,1900,20th St,,,2019-01-12,1/12/2019,0,0,0,0,3,0,3,3,2024-25,in-lieu fee
+under-construction-949-10th-st,under_construction,,949,10th St,,,2021-10-13,10/13/2021,0,0,0,0,3,0,3,3,2024-25,in-lieu fee
+under-construction-3223-wilshire-blvd,under_construction,,3223,Wilshire Blvd,,,2021-12-02,12/2/2021,4,0,0,0,49,4,49,53,2024-25,
+under-construction-601-611-wilshire-blvd,under_construction,,601-611,Wilshire Blvd,,,2023-01-10,1/10/2023,3,0,0,0,37,3,37,40,2024-25,
+under-construction-2501-2nd-st,under_construction,,2501,2nd St,,,2022-01-19,1/19/2022,0,0,0,0,3,0,3,3,2024-25,in-lieu fee
+under-construction-1348-10th,under_construction,,1348,10th,,,2022-02-01,2/1/2022,0,0,0,0,1,0,1,1,2024-25,
+under-construction-711-colorado-ave,under_construction,,711,Colorado Ave,,,2022-03-04,3/4/2022,17,0,0,39,0,56,0,56,2024-25,
+under-construction-3004-broadway,under_construction,,3004,Broadway,,,2022-04-07,4/7/2022,0,0,0,0,4,0,4,4,2024-25,in-lieu fee
+under-construction-1413-michigan-ave,under_construction,,1413,Michigan Ave,,,2022-06-06,6/6/2022,57,0,1,0,0,58,0,58,2024-25,
+under-construction-1650-1660-lincoln-blvd,under_construction,,1650-1660,Lincoln Blvd,,,2022-08-29,8/29/2022,8,0,0,0,90,8,90,98,2024-25,
+under-construction-1430-1444-lincoln-blvd,under_construction,,1430-1444,Lincoln Blvd,,,2022-11-07,11/7/2022,0,0,0,0,100,0,100,100,2024-25,offsite affordable at 711 Colorado Ave
+under-construction-1121-22nd-st,under_construction,,1121,22nd St,,,2023-02-07,2/7/2023,0,0,0,0,3,0,3,3,2024-25,in-lieu fee
+under-construction-2425-20th,under_construction,,2425,20th,,,2023-02-07,2/7/2023,0,0,0,0,3,0,3,3,2024-25,in-lieu fee
+under-construction-710-broadway,under_construction,,710,Broadway,,,2023-02-22,2/22/2023,16,16,25,27,196,84,196,280,2024-25,
+under-construction-501-broadway,under_construction,,501,Broadway,,,2023-10-17,10/17/2023,0,19,0,0,75,19,75,94,2024-25,
+under-construction-1546-9th,under_construction,,1546,9th,,,2023-12-11,12/11/2023,0,2,0,0,7,2,7,9,2024-25,
+under-construction-1342-berkeley,under_construction,,1342,Berkeley,,,2024-05-13,05/13/2024,8,0,0,0,0,8,0,8,2024-25,
+under-construction-2002-2008-21st,under_construction,,2002-2008,21st,,,2024-05-21,05/21/2024,0,0,0,0,19,0,19,19,2024-25,
+under-construction-1634-20th-st,under_construction,,1634,20th St,,,2025-02-10,2/10/2025,20,20,19,19,0,78,0,78,2024-25,
+planning-825-santa-monica-blvd,planning,23ENT-0109,825,Santa Monica Blvd,Mixed Use 7 story,GC,2024-06-04,6/4/2024,0,5,5,4,85,14,85,99,2023-24,
+planning-1230-ashland,planning,24ENT-0039,1230,Ashland,SB9 Lot Split and Duplex,R1,2024-05-21,5/21/2024,0,0,0,0,8,0,8,8,2023-24,
+planning-700-santa-monica-blvd,planning,23ENT-0121,700,Santa Monica Blvd,Mixed use 5 story (also 1407 7th),NV,2024-03-29,3/29/2024,0,4,3,3,89,10,89,99,2023-24,
+planning-1101-stanford,planning,23ENT-0235,1101,Stanford,SB9 Lot Split and Duplex,R1,2024-02-13,2/13/2024,0,0,0,0,8,0,8,8,2023-24,
+planning-2600-wilshire-blvd,planning,22ENT-0308,2600,Wilshire Blvd,Mixed Use,MUB,2024-02-05,2/5/2024,0,5,0,0,40,5,40,45,2023-24,
+planning-1553-1555-4th-st,planning,22ENT-0082,1553-1555,4th St,Mixed Use (also 407 Colorado Ave),TA,2023-12-14,12/14/2023,0,6,0,0,54,6,54,60,2023-24,
+planning-2601-2645-lincoln-blvd,planning,22ENT-0073,2601-2645,Lincoln Blvd,Mixed Use (Gelsons site),MUBL,2023-11-15,11/15/2023,0,53,0,0,468,53,468,521,2023-24,
+planning-1665-appian-way,planning,16ENT-0112,1665,Appian Way,3-Unit Condos,OF,2023-08-16,8/16/2023,0,0,0,0,2,0,2,2,2023-24,
+planning-2615-26th-st,planning,23ENT-0106,2615,26th St,SB9 Duplex,R1,2023-08-03,8/3/2023,0,0,0,0,2,0,2,2,2023-24,
+planning-901-913-pico-blvd,planning,,901-913,Pico Blvd,5 Story Mixed Use,GC,2024-08-13,08/13/2024,0,5,0,0,40,5,40,45,2024-25,
+planning-1527-1547-lincoln-blvd,planning,,1527-1547,Lincoln Blvd,Mixed Use 8 Story,LT,2024-08-16,08/16/2024,0,7,7,7,189,21,189,210,2024-25,
+planning-2501-wilshire-blvd,planning,,2501,Wilshire Blvd,Mixed Use 8 Story,MUB,2024-08-19,08/19/2024,0,6,6,5,153,17,153,170,2024-25,
+planning-1801-santa-monica-blvd,planning,,1801,Santa Monica Blvd,Multiunit Residential 8 Stories,GC,2024-11-19,11/19/2024,0,5,5,5,130,15,130,145,2024-25,
+planning-1819-santa-monica-blvd,planning,,1819,Santa Monica Blvd,Mixed Use 8 Story,GC,2024-11-19,11/19/2024,0,5,5,5,128,15,128,143,2024-25,
+planning-2025-2037-wilshire-blvd,planning,,2025-2037,Wilshire Blvd,Mixed Use 8 Story,MUB,2024-12-12,12/12/2024,0,5,5,5,135,15,135,150,2024-25,
+planning-1217-14th-street,planning,,1217,14th Street,6 Story 100% Senior Affordable,R3,2025-04-11,4/11/2025,0,0,66,16,0,82,0,82,2024-25,
+planning-1415-1437-5th-street,planning,,1415-1437,5th Street,"Mixed Use, 18 Story",TA,2025-03-06,3/6/2025,0,11,11,42,358,64,358,422,2024-25,
+planning-1217-euclid,planning,,1217,Euclid,100% Affordable Housing,R3,2025-03-10,3/10/2025,0,0,39,9,0,48,0,48,2024-25,
+planning-1902-1908-wilshire-blvd,planning,,1902-1908,Wilshire Blvd,Mixed Use 8 Story,LT,2024-08-08,08/08/2024,0,5,5,4,126,14,126,140,2024-25,
+planning-2919-wilshire-blvd,planning,,2919,Wilshire Blvd,Mixed Use 8 Story,MUB,2025-06-18,6/18/2025,0,5,4,4,114,13,114,127,2024-25,
+planning-601-609-colorado-ave,planning,,601-609,Colorado Ave,Mixed Use 24 Story,TA,2025-06-25,6/25/2025,0,7,7,26,224,40,224,264,2024-25,
+planning-1420-1422-20th-street,planning,,1420-1422,20th Street,8 Story Hotel/Residential,R2,2024-12-18,12/18/2024,0,0,0,0,50,0,50,50,2024-25,
+planning-528-arizona-ave,planning,,528,Arizona Ave,Mixed Use 8 Story,NV,2024-07-25,07/25/2024,0,6,6,6,132,18,132,150,2024-25,

@@ -1,0 +1,127 @@
+---
+import { dataUrl } from '../lib/dataUrl';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Santa Monica Proposition R',
+  description = "Cumulative achievements and a map of multifamily developments under Santa Monica's Proposition R affordable-housing mandate.",
+} = Astro.props;
+
+const nav = [
+  { href: dataUrl('/'), label: 'Map' },
+  { href: dataUrl('/charts'), label: 'Charts' },
+  { href: dataUrl('/about'), label: 'About' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" href={dataUrl('/favicon.svg')} type="image/svg+xml" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={dataUrl('/')}>Santa Monica Prop R</a>
+      <nav class="site-nav" aria-label="Primary">
+        {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+    </header>
+
+    <main class="site-main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Basemap &copy; <a href="https://carto.com/about-carto/" rel="noopener">CARTO</a>,
+        &copy; <a href="https://www.openstreetmap.org/copyright" rel="noopener"
+          >OpenStreetMap</a
+        > contributors.
+        Parcel geometry: City of Santa Monica / LA County (ArcGIS).
+      </p>
+      <p>
+        Data: City of Santa Monica annual Proposition R reports (public records).
+        Code <a href="https://opensource.org/license/mit" rel="noopener">MIT</a>,
+        data <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener"
+          >CC0</a
+        >.
+      </p>
+    </footer>
+
+    <style is:global>
+      :root {
+        --max-width: 64rem;
+        --fg: #1a1a1a;
+        --muted: #5a5a5a;
+        --bg: #ffffff;
+        --accent: #1d6fb8;
+        --border: #e2e2e2;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--fg);
+        background: var(--bg);
+        line-height: 1.5;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.75rem 1.25rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .brand {
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--fg);
+      }
+
+      .site-nav {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .site-nav a {
+        text-decoration: none;
+        color: var(--accent);
+      }
+
+      .site-nav a:hover {
+        text-decoration: underline;
+      }
+
+      .site-main {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .site-footer {
+        max-width: var(--max-width);
+        margin: 2rem auto 1.5rem;
+        padding: 1rem 1.25rem 0;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.875rem;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,561 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { dataUrl } from '../lib/dataUrl';
+
+// Resolve build-time GeoJSON through the Pages base path and hand them to the
+// client script as data attributes, so the bundled module never hardcodes a
+// root-relative URL (which would 404 under the /propr-report project base).
+const developmentsUrl = dataUrl('data/developments.geojson');
+const boundaryUrl = dataUrl('data/boundary.geojson');
+---
+
+<Layout title="Map — Santa Monica Prop R">
+  <h1>Multifamily Developments Map</h1>
+  <p class="intro">
+    Every multifamily development tracked under Santa Monica's
+    <strong>Proposition R</strong> affordable-housing mandate, by address.
+    Sites are colored by status &mdash; completed, under construction, or with
+    planning approvals. Click a parcel for its unit mix and affordability
+    breakdown. Toggle the 3D view to raise each site into a "skyline" scaled by
+    its total unit count.
+  </p>
+
+  <div class="map-wrap">
+    <div
+      id="map"
+      class="map"
+      data-developments-url={developmentsUrl}
+      data-boundary-url={boundaryUrl}
+    >
+    </div>
+  </div>
+
+  <p class="caption">
+    Source: City of Santa Monica annual Proposition R reports, Attachments A
+    (completed), C (under construction), and D (planning approvals). Four sites
+    without a matched parcel are shown as approximate point markers. Basemap
+    &copy; <a href="https://carto.com/about-carto/">CARTO</a>, &copy;
+    <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
+    contributors. Parcel geometry from the City of Santa Monica / LA County
+    parcels ArcGIS service.
+  </p>
+</Layout>
+
+<style>
+  .intro {
+    max-width: 65ch;
+    color: var(--muted);
+  }
+
+  .map-wrap {
+    position: relative;
+    margin: 1.25rem 0 0.5rem;
+  }
+
+  .map {
+    height: 75vh;
+    min-height: 420px;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .caption {
+    margin-top: 0.5rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    max-width: 75ch;
+  }
+
+  /* Legend + 3D control are injected as MapLibre custom controls; style their
+     containers (they live inside .maplibregl-ctrl). */
+  .map :global(.legend-ctrl) {
+    background: #ffffff;
+    padding: 0.5rem 0.6rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .map :global(.legend-ctrl h3) {
+    margin: 0 0 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .map :global(.legend-row) {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    user-select: none;
+    padding: 1px 0;
+  }
+
+  .map :global(.legend-row.is-off) {
+    opacity: 0.4;
+  }
+
+  .map :global(.legend-swatch) {
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 2px;
+    flex: 0 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+  }
+
+  .map :global(.threed-ctrl) {
+    background: #ffffff;
+    padding: 0.4rem 0.55rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    font-size: 0.8rem;
+  }
+
+  .map :global(.threed-ctrl label) {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .map :global(.dev-popup h4) {
+    margin: 0 0 0.25rem;
+    font-size: 0.95rem;
+  }
+
+  .map :global(.dev-popup .cat) {
+    font-weight: 600;
+  }
+
+  .map :global(.dev-popup dl) {
+    margin: 0.4rem 0 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.1rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .map :global(.dev-popup dt) {
+    color: var(--muted);
+  }
+
+  .map :global(.dev-popup dd) {
+    margin: 0;
+  }
+
+  .map :global(.maplibregl-popup-content) {
+    max-width: 18rem;
+  }
+</style>
+
+<script>
+  import maplibregl from 'maplibre-gl';
+  import 'maplibre-gl/dist/maplibre-gl.css';
+  import {
+    BASEMAP_STYLE,
+    CATEGORIES,
+    CATEGORY_COLOR,
+    DEFAULT_ZOOM,
+    METERS_PER_UNIT,
+    SANTA_MONICA_CENTER,
+    type Category,
+  } from '../lib/mapConfig';
+
+  type DevProps = {
+    dev_id: string;
+    category: Category;
+    address: string;
+    street: string;
+    description?: string;
+    zoning?: string;
+    date_iso?: string;
+    date_raw?: string;
+    total_units: number | null;
+    affordable_units: number | null;
+    market_units: number | null;
+    eli: number | null;
+    vli: number | null;
+    li: number | null;
+    moderate: number | null;
+    above_moderate: number | null;
+    source_fiscal_year?: string;
+    note?: string;
+    project_id?: string;
+    apn?: string | null;
+    ain?: string | null;
+    is_point: boolean;
+  };
+
+  type FeatureCollection = {
+    type: 'FeatureCollection';
+    features: Array<{
+      type: 'Feature';
+      geometry: { type: string; coordinates: unknown } | null;
+      properties: Record<string, unknown> | null;
+    }>;
+  };
+
+  const SOURCE_ID = 'developments';
+  const BOUNDARY_SOURCE = 'boundary';
+
+  // Per-category layer ids for polygons (flat fill, outline, 3D extrusion) and
+  // for the point-fallback circles.
+  const fillLayer = (c: Category) => `fill-${c}`;
+  const lineLayer = (c: Category) => `line-${c}`;
+  const extrudeLayer = (c: Category) => `extrude-${c}`;
+  const circleLayer = (c: Category) => `circle-${c}`;
+
+  function escapeHtml(s: unknown): string {
+    return String(s ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function categoryLabel(c: Category): string {
+    return CATEGORIES.find((x) => x.id === c)?.label ?? c;
+  }
+
+  function num(v: number | null | undefined): number {
+    return typeof v === 'number' && Number.isFinite(v) ? v : 0;
+  }
+
+  function popupHtml(p: DevProps): string {
+    const addr = [p.address, p.street].filter(Boolean).join(' ');
+    const bands: Array<[string, number]> = [
+      ['Extremely low (ELI)', num(p.eli)],
+      ['Very low (VLI)', num(p.vli)],
+      ['Low (LI)', num(p.li)],
+      ['Moderate', num(p.moderate)],
+      ['Above moderate / market', num(p.above_moderate)],
+    ];
+    const bandRows = bands
+      .filter(([, n]) => n > 0)
+      .map(([label, n]) => `<dt>${escapeHtml(label)}</dt><dd>${n}</dd>`)
+      .join('');
+
+    const rows: string[] = [];
+    rows.push(
+      `<dt>Status</dt><dd class="cat">${escapeHtml(categoryLabel(p.category))}</dd>`,
+    );
+    if (p.total_units != null)
+      rows.push(`<dt>Total units</dt><dd>${num(p.total_units)}</dd>`);
+    rows.push(
+      `<dt>Affordable / market</dt><dd>${num(p.affordable_units)} / ${num(p.market_units)}</dd>`,
+    );
+    if (bandRows) rows.push(bandRows);
+    if (p.zoning) rows.push(`<dt>Zoning</dt><dd>${escapeHtml(p.zoning)}</dd>`);
+    if (p.date_raw || p.date_iso)
+      rows.push(`<dt>Date</dt><dd>${escapeHtml(p.date_raw || p.date_iso)}</dd>`);
+    if (p.source_fiscal_year)
+      rows.push(`<dt>Report FY</dt><dd>${escapeHtml(p.source_fiscal_year)}</dd>`);
+    if (p.project_id)
+      rows.push(`<dt>Project ID</dt><dd>${escapeHtml(p.project_id)}</dd>`);
+    if (p.note) rows.push(`<dt>Note</dt><dd>${escapeHtml(p.note)}</dd>`);
+
+    const desc = p.description
+      ? `<p style="margin:0.35rem 0 0;font-size:0.8rem">${escapeHtml(p.description)}</p>`
+      : '';
+
+    return `<div class="dev-popup">
+      <h4>${escapeHtml(addr)}</h4>
+      ${desc}
+      <dl>${rows.join('')}</dl>
+    </div>`;
+  }
+
+  // ---- Custom controls -------------------------------------------------------
+
+  /** Legend with clickable rows to toggle category visibility. */
+  class LegendControl implements maplibregl.IControl {
+    private container!: HTMLElement;
+    constructor(private readonly onToggle: (c: Category, visible: boolean) => void) {}
+    onAdd(): HTMLElement {
+      const el = document.createElement('div');
+      el.className = 'maplibregl-ctrl legend-ctrl';
+      el.innerHTML = '<h3>Development status</h3>';
+      const state: Record<Category, boolean> = {
+        completed: true,
+        under_construction: true,
+        planning: true,
+      };
+      for (const cat of CATEGORIES) {
+        const row = document.createElement('div');
+        row.className = 'legend-row';
+        row.setAttribute('role', 'button');
+        row.setAttribute('tabindex', '0');
+        row.title = 'Click to show/hide';
+        row.innerHTML =
+          `<span class="legend-swatch" style="background:${cat.color}"></span>` +
+          `<span>${cat.label}</span>`;
+        const toggle = () => {
+          state[cat.id] = !state[cat.id];
+          row.classList.toggle('is-off', !state[cat.id]);
+          this.onToggle(cat.id, state[cat.id]);
+        };
+        row.addEventListener('click', toggle);
+        row.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggle();
+          }
+        });
+        el.appendChild(row);
+      }
+      this.container = el;
+      return el;
+    }
+    onRemove(): void {
+      this.container.remove();
+    }
+  }
+
+  /** Checkbox control for the 3D extrusion toggle. */
+  class ThreeDControl implements maplibregl.IControl {
+    private container!: HTMLElement;
+    constructor(private readonly onToggle: (on: boolean) => void) {}
+    onAdd(): HTMLElement {
+      const el = document.createElement('div');
+      el.className = 'maplibregl-ctrl threed-ctrl';
+      const label = document.createElement('label');
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.addEventListener('change', () => this.onToggle(cb.checked));
+      label.appendChild(cb);
+      label.appendChild(document.createTextNode('3D heights'));
+      el.appendChild(label);
+      this.container = el;
+      return el;
+    }
+    onRemove(): void {
+      this.container.remove();
+    }
+  }
+
+  // ---- Map setup -------------------------------------------------------------
+
+  function bbox(geojson: FeatureCollection): maplibregl.LngLatBoundsLike | null {
+    let minX = Infinity,
+      minY = Infinity,
+      maxX = -Infinity,
+      maxY = -Infinity;
+    const visit = (coords: any) => {
+      if (typeof coords[0] === 'number') {
+        const [x, y] = coords;
+        if (x < minX) minX = x;
+        if (y < minY) minY = y;
+        if (x > maxX) maxX = x;
+        if (y > maxY) maxY = y;
+      } else {
+        for (const c of coords) visit(c);
+      }
+    };
+    for (const f of geojson.features) {
+      if (f.geometry && 'coordinates' in f.geometry) visit((f.geometry as any).coordinates);
+    }
+    if (!Number.isFinite(minX)) return null;
+    return [
+      [minX, minY],
+      [maxX, maxY],
+    ];
+  }
+
+  async function fetchJson<T>(url: string): Promise<T> {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(`Failed to load ${url}: ${r.status}`);
+    return (await r.json()) as T;
+  }
+
+  async function init() {
+    const el = document.getElementById('map');
+    if (!el) return;
+    const developmentsUrl = el.dataset.developmentsUrl;
+    const boundaryUrl = el.dataset.boundaryUrl;
+    if (!developmentsUrl || !boundaryUrl) return;
+
+    let developments: FeatureCollection;
+    let boundary: FeatureCollection;
+    try {
+      [developments, boundary] = await Promise.all([
+        fetchJson<FeatureCollection>(developmentsUrl),
+        fetchJson<FeatureCollection>(boundaryUrl),
+      ]);
+    } catch (err) {
+      console.error(err);
+      el.textContent = 'Unable to load map data.';
+      return;
+    }
+
+    const map = new maplibregl.Map({
+      container: el,
+      style: BASEMAP_STYLE,
+      center: SANTA_MONICA_CENTER,
+      zoom: DEFAULT_ZOOM,
+      attributionControl: false,
+    });
+
+    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
+    map.addControl(
+      new maplibregl.AttributionControl({
+        compact: false,
+        customAttribution:
+          'Parcel geometry: City of Santa Monica / LA County parcels (ArcGIS)',
+      }),
+      'bottom-right',
+    );
+
+    let is3D = false;
+
+    map.on('load', () => {
+      // Boundary overlay (thin line) for orientation.
+      map.addSource(BOUNDARY_SOURCE, { type: 'geojson', data: boundary });
+      map.addLayer({
+        id: 'boundary-line',
+        type: 'line',
+        source: BOUNDARY_SOURCE,
+        paint: {
+          'line-color': '#444',
+          'line-width': 1.2,
+          'line-dasharray': [3, 2],
+          'line-opacity': 0.7,
+        },
+      });
+
+      // Developments source.
+      map.addSource(SOURCE_ID, { type: 'geojson', data: developments });
+
+      // Per-category layers. Polygons get flat fill + outline + (hidden) extrusion;
+      // points get circles. Filtering by category keeps legend toggles simple.
+      for (const cat of CATEGORIES) {
+        const color = CATEGORY_COLOR[cat.id];
+        const polyFilter: any = [
+          'all',
+          ['==', ['get', 'category'], cat.id],
+          ['!=', ['get', 'is_point'], true],
+        ];
+        const pointFilter: any = [
+          'all',
+          ['==', ['get', 'category'], cat.id],
+          ['==', ['get', 'is_point'], true],
+        ];
+
+        map.addLayer({
+          id: fillLayer(cat.id),
+          type: 'fill',
+          source: SOURCE_ID,
+          filter: polyFilter,
+          paint: { 'fill-color': color, 'fill-opacity': 0.45 },
+        });
+        map.addLayer({
+          id: lineLayer(cat.id),
+          type: 'line',
+          source: SOURCE_ID,
+          filter: polyFilter,
+          paint: { 'line-color': color, 'line-width': 1.5 },
+        });
+        map.addLayer({
+          id: extrudeLayer(cat.id),
+          type: 'fill-extrusion',
+          source: SOURCE_ID,
+          filter: polyFilter,
+          layout: { visibility: 'none' },
+          paint: {
+            'fill-extrusion-color': color,
+            'fill-extrusion-opacity': 0.85,
+            'fill-extrusion-height': [
+              '*',
+              ['coalesce', ['to-number', ['get', 'total_units']], 0],
+              METERS_PER_UNIT,
+            ],
+            'fill-extrusion-base': 0,
+          },
+        });
+        map.addLayer({
+          id: circleLayer(cat.id),
+          type: 'circle',
+          source: SOURCE_ID,
+          filter: pointFilter,
+          paint: {
+            'circle-color': color,
+            'circle-radius': 7,
+            'circle-stroke-color': '#ffffff',
+            'circle-stroke-width': 1.5,
+            'circle-opacity': 0.9,
+          },
+        });
+      }
+
+      // Fit to developments (fallback to boundary) bounds.
+      const b = bbox(developments) ?? bbox(boundary);
+      if (b) map.fitBounds(b, { padding: 40, maxZoom: 15, duration: 0 });
+
+      // Interactivity: pointer cursor + popup. Group multi-parcel features by
+      // dev_id so clicking any parcel of a development shows one popup.
+      const interactiveLayers = CATEGORIES.flatMap((c) => [fillLayer(c.id), circleLayer(c.id)]);
+      const extrudeLayers = CATEGORIES.map((c) => extrudeLayer(c.id));
+
+      const openPopup = (e: maplibregl.MapLayerMouseEvent) => {
+        const feature = e.features?.[0];
+        if (!feature) return;
+        const props = feature.properties as unknown as DevProps;
+        new maplibregl.Popup({ maxWidth: '300px' })
+          .setLngLat(e.lngLat)
+          .setHTML(popupHtml(props))
+          .addTo(map);
+      };
+
+      for (const layer of [...interactiveLayers, ...extrudeLayers]) {
+        map.on('click', layer, openPopup);
+        map.on('mouseenter', layer, () => {
+          map.getCanvas().style.cursor = 'pointer';
+        });
+        map.on('mouseleave', layer, () => {
+          map.getCanvas().style.cursor = '';
+        });
+      }
+
+      // Legend: toggle every layer that belongs to a category.
+      map.addControl(
+        new LegendControl((cat, visible) => {
+          const vis = visible ? 'visible' : 'none';
+          const ids = [lineLayer(cat), circleLayer(cat)];
+          // Flat fill or extrusion depending on current mode.
+          ids.push(is3D ? extrudeLayer(cat) : fillLayer(cat));
+          for (const id of ids) {
+            if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', vis);
+          }
+          // Keep the inactive polygon representation hidden regardless.
+          const hidden = is3D ? fillLayer(cat) : extrudeLayer(cat);
+          if (map.getLayer(hidden)) map.setLayoutProperty(hidden, 'visibility', 'none');
+        }),
+        'top-left',
+      );
+
+      // 3D toggle: swap flat fills for extrusions and pitch the camera.
+      map.addControl(
+        new ThreeDControl((on) => {
+          is3D = on;
+          for (const c of CATEGORIES) {
+            const flatVisible = map.getLayoutProperty(lineLayer(c.id), 'visibility') !== 'none';
+            const vis = flatVisible ? 'visible' : 'none';
+            map.setLayoutProperty(fillLayer(c.id), 'visibility', on ? 'none' : vis);
+            map.setLayoutProperty(extrudeLayer(c.id), 'visibility', on ? vis : 'none');
+          }
+          map.easeTo({
+            pitch: on ? 50 : 0,
+            bearing: on ? -20 : 0,
+            duration: 600,
+          });
+        }),
+        'top-left',
+      );
+    });
+  }
+
+  init();
+</script>
