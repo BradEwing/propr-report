@@ -1,0 +1,13 @@
+source_fiscal_year,project_id,address,street,description,zoning,final_date,above_moderate,eli,vli,li,moderate,total_units
+2023-24,20ENT-0020,1413,Michigan Ave,"100% Affordable Housing",NC,05/23/2024,,,57,1,,
+2023-24,19ENT-0028,2729,Wilshire Blvd,"Mixed use Project with Commercial",MUB,1/31/2024,8,,,1,,
+2023-24,17ENT-0275,1235,5th St,"Mixed Use",NV,1/25/2024,18,,2,1,2,
+2023-24,19ENT-0123,930,15th St,"3-Unit Condos",R2,11/17/2023,3,,,,,
+2023-24,16ENT-0035,2903-2931,Lincoln Blvd,"2903-2931 Lincoln Boulevard Mixed Use",GC,11/17/2023,43,,4,,,
+2023-24,12DEV-017,1560,Lincoln Blvd,"Mixed Use DA (Denny's site)",MUB,11/2/2023,80,,15,5,,
+2023-24,17ENT-0096,1450,Cloverfield,"Mixed Use",MUBL,9/21/2023,32,,3,,,
+2024-25,16ENT-0011,1840,17th Street,"5 Unit Condos",R2,8/6/2024,4,,,1,,5
+2024-25,16BLD-1072,1541,Franklin St.,"Apartments",R2,11/26/2024,4,,,,1,5
+2024-25,18ENT-0258,949,10th Street,"3 Unit Condos",R2,1/30/2025,3,,,,,3
+2024-25,18ENT-0008,212,Bay St,"3 Unit Condos",NC,3/25/2025,3,,,,,3
+2024-25,18ENT-0129,711,Colorado Ave,"Mixed use 100% affordable housing",TA,5/1/2025,,17,,,39,56

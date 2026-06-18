@@ -1,0 +1,24 @@
+source_fiscal_year,project_id,address,street,description,zoning,final_date,moderate,li,vli,above_moderate
+2023-24,23ENT-0109,825,Santa Monica Blvd,"Mixed Use 7 story",GC,6/4/2024,4,5,5,85
+2023-24,24ENT-0039,1230,Ashland,"SB9 Lot Split and Duplex",R1,5/21/2024,,,,8
+2023-24,23ENT-0121,700,Santa Monica Blvd,"Mixed use 5 story (also 1407 7th)",NV,3/29/2024,3,3,4,89
+2023-24,23ENT-0235,1101,Stanford,"SB9 Lot Split and Duplex",R1,2/13/2024,,,,8
+2023-24,22ENT-0308,2600,Wilshire Blvd,"Mixed Use",MUB,2/5/2024,,,5,40
+2023-24,22ENT-0082,1553-1555,4th St,"Mixed Use (also 407 Colorado Ave)",TA,12/14/2023,,,6,54
+2023-24,22ENT-0073,2601-2645,Lincoln Blvd,"Mixed Use (Gelsons site)",MUBL,11/15/2023,,,53,468
+2023-24,16ENT-0112,1665,Appian Way,"3-Unit Condos",OF,8/16/2023,,,,2
+2023-24,23ENT-0106,2615,26th St,"SB9 Duplex",R1,8/3/2023,,,,2
+2024-25,,601-609,Colorado Ave,"Mixed Use 24 Story",TA,6/25/2025,26,7,7,224
+2024-25,,2919,Wilshire Blvd,"Mixed Use 8 Story",MUB,6/18/2025,4,4,5,114
+2024-25,,1217,14th Street,"6 Story 100% Senior Affordable",R3,4/11/2025,16,66,,
+2024-25,,1217,Euclid,"100% Affordable Housing",R3,3/10/2025,9,39,,
+2024-25,,1415-1437,5th Street,"Mixed Use, 18 Story",TA,3/6/2025,42,11,11,358
+2024-25,,1420-1422,20th Street,"8 Story Hotel/Residential",R2,12/18/2024,,,,50
+2024-25,,2025-2037,Wilshire Blvd,"Mixed Use 8 Story",MUB,12/12/2024,5,5,5,135
+2024-25,,1819,Santa Monica Blvd,"Mixed Use 8 Story",GC,11/19/2024,5,5,5,128
+2024-25,,1801,Santa Monica Blvd,"Multiunit Residential 8 Stories",GC,11/19/2024,5,5,5,130
+2024-25,,2501,Wilshire Blvd,"Mixed Use 8 Story",MUB,08/19/2024,5,6,6,153
+2024-25,,1527-1547,Lincoln Blvd,"Mixed Use 8 Story",LT,08/16/2024,7,7,7,189
+2024-25,,901-913,Pico Blvd,"5 Story Mixed Use",GC,08/13/2024,,,5,40
+2024-25,,1902-1908,Wilshire Blvd,"Mixed Use 8 Story",LT,08/08/2024,4,5,5,126
+2024-25,,528,Arizona Ave,"Mixed Use 8 Story",NV,07/25/2024,6,6,6,132
