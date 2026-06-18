@@ -29,7 +29,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: npm
           cache-dependency-path: site/package-lock.json
 
@@ -41,12 +41,14 @@ jobs:
         working-directory: site
         run: npx astro check
 
-      # `astro build` runs the `prebuild` hook (`npm run build-data`), which
-      # generates site/public/data/* from the committed data/curated/*.csv and
-      # data/geo/*.geojson inputs. Those generated artifacts are git-ignored.
-      - name: Astro build
+      # `npm run build` (NOT `npx astro build`) so the `prebuild` lifecycle hook
+      # fires `npm run build-data`, generating site/public/data/* from the
+      # committed data/curated/*.csv and data/geo/*.geojson inputs before the
+      # static build. Those generated artifacts are git-ignored. npx bypasses
+      # npm lifecycle hooks, so the data dir would be missing on the live site.
+      - name: Build site
         working-directory: site
-        run: npx astro build
+        run: npm run build
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
