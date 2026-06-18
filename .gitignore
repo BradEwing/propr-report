@@ -1,0 +1,23 @@
+# Rendered/derived artifacts (regenerable)
+_render/
+*.png
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Node / TypeScript
+node_modules/
+dist/
+.cache/
+*.tsbuildinfo
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+
+# Claude Code personal/local settings
+.claude/settings.local.json
