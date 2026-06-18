@@ -53,14 +53,39 @@ it is blank for FY2024-25 rows, where the source omitted that column.
 
 ## Known source anomalies
 
-- **2000-01 city-funded count.** The FY2024-25 Attachment B prints `120` in the
-  city-funded cell for 2000-01. That is impossible (it exceeds the year's 109
-  affordable residences), and the row's own `18%` plus the column Total of 1,560
-  both imply `20`. We record `20` and treat the printed `120` as a source typo.
-- **Percentages are not exact ratios.** Reported percents are rounded and do not
-  always equal the count ratio. For example 2024-25 prints 79% affordable while
-  58/72 is 80.6%. Keep the reported percents for fidelity; recompute from counts
-  if you need exact values.
+Two cells in the FY2024-25 Attachment B table are wrong in the source. Each was
+confirmed three ways: by the report's own other figures, by an independent
+deterministic check (`tools/verify_claims.py`), and by adversarial review. In
+both cases we store the value the report's own evidence establishes and flag the
+printed cell here. A forwardable writeup for the report's author is in
+`docs/README.md`.
+
+- **2000-01 city-funded count: stored `20`, printed `120`.** `120` exceeds the
+  year's 109 affordable residences (a subset cannot exceed its parent), the row's
+  own `18%` implies `20` (20/109 = 18%), and the column Total of `1,560` only
+  reconciles with `20` (summing the printed column gives 1,660). All three force
+  `20`.
+- **2024-25 percent affordable: stored `81`, printed `79`.** The counts give
+  58/72 = 80.6%, which rounds to 81%, and the same report states 81% twice
+  elsewhere: the page 2 table (`% Low & Mod-Income = 81%`) and the page 3
+  narrative ("81% of new multifamily housing residences are affordable"). The
+  `79%` in the page 6 table is an isolated typo, not a different calculation. Its
+  own components (14 + 58 = 72) are correct, so only the percent glyph is wrong.
+
+Note on percent columns generally: they are the report's rounded display values.
+Where they disagree with the counts, trust the counts (recompute as
+`round(affordable / total)`), which match the printed percent on every other row.
+
+## What the counts represent (verified)
+
+`total_residences` is **all new multifamily residences completed citywide** that
+fiscal year, the base the 30% Prop R mandate is measured against. It is not
+limited to Prop-R-funded or inclusionary units; it even includes 100%
+market-rate projects that complied by paying an in-lieu fee. It is multifamily
+only (single-family excluded; ADUs not counted). `pct_affordable` uses this same
+`total_residences` as its denominator. Confirmed against the City's AHPP
+guidelines, the FY2018-19 summary report, and a third report (FY2019-2023) whose
+cumulative subtotals reconcile exactly with this series.
 
 ## Schema drift across years (do not assume stable columns)
 

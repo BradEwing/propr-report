@@ -78,14 +78,22 @@ new multifamily units). The **Affordable Housing Production Program (AHPP)**, Sa
 "Low income" means at or below 60% AMI and "moderate" at or below 120% AMI. The moderate ceiling rose from
 100% to 120% AMI, which recent reports reflect.
 
-**What "Total Residences" means** (resolved by reading the reports): in Attachment B's cumulative table,
-Total Residences counts **all new multifamily residences produced citywide**, not only units that
-received Prop R or city funding. Prop R is a citywide regulatory mandate on all new multifamily
-construction, applied mostly through inclusionary requirements on market-rate projects. A separate stream
-of city-funded 100%-affordable projects sits on top of that. The table breaks out the city-funded subset
-in its own columns (*City-Funded Affordable Residences*, *% Affordable City Funded*, and *Prop R
-Compliance Achieved Due to City Funding*). So `Total = Market Rate + Affordable` citywide, and city-funded
-affordable is a subset of Affordable.
+**What "Total Residences" means** (verified, see below): in Attachment B's cumulative table, Total
+Residences counts **all new multifamily residences completed citywide** that fiscal year, not only units
+that received Prop R or city funding. It even includes 100% market-rate projects that complied by paying
+an in-lieu fee. It is multifamily only: single-family homes are excluded and ADUs are not counted. Prop R
+is a citywide regulatory mandate on all new multifamily construction, measured as the affordable share of
+this total. A separate stream of city-funded 100%-affordable projects sits inside it; the table breaks out
+that subset in its own columns (*City-Funded Affordable Residences*, *% Affordable City Funded*, and
+*Prop R Compliance Achieved Due to City Funding*). So `Total = Market Rate + Affordable` citywide,
+`pct_affordable` uses this same Total as its denominator, and city-funded affordable is a subset of
+Affordable.
+
+This was confirmed against the City's AHPP guidelines, the FY2018-19 summary report, and a third report
+(FY2019-2023) whose cumulative subtotals reconcile exactly with this series. See
+`data/curated/README.md` for the sources and for two confirmed typos in the FY2024-25 Attachment B table
+(2000-01 city-funded prints 120 but is 20; 2024-25 percent affordable prints 79 but is 81, per the same
+report's page 2 and page 3). `tools/verify_claims.py` reproduces both findings deterministically.
 
 ## Source documents
 
@@ -114,9 +122,10 @@ row. The **FY 2024-25 report is the authoritative copy** of the complete 1994-95
 the FY 2023-24 report is a strict prefix. Its columns are:
 `Reporting Period (FY) | Total Residences | Market Rate | Affordable | % Affordable | % Very-Low & Low Income | City-Funded Affordable | % Affordable City-Funded | Prop R Compliance Achieved Due to City Funding`.
 
-Cross-check the totals when extracting. FY23-24 cumulative is **7,017** (4,503 market, 2,454 affordable,
-1,560 city-funded). FY24-25 is **7,089** (4,577, 2,512, 1,560). The 72-unit difference equals FY24-25
-completions, which gives a good sanity check.
+Cross-check the totals when extracting. FY23-24 cumulative is **7,017** (4,563 market, 2,454 affordable,
+1,560 city-funded). FY24-25 is **7,089** (4,577 market, 2,512 affordable, 1,560 city-funded). The 72-unit
+difference equals FY24-25 completions, and market plus affordable equals total on every row. These are a
+good sanity check.
 
 ### Schema drift to handle in the pipeline
 
